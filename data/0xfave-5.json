@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xfave",
+  "risk": "2",
+  "title": "Curves::getFees - consider make use of rounding directions in favour of the protocol",
+  "issueId": 5,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/5"
+}
