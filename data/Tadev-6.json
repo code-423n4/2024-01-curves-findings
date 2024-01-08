@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tadev",
+  "risk": "3",
+  "title": "Access control related modifiers in Security contract will not work, allowing any user to call critical setter functions in Curves contract.",
+  "issueId": 6,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/6"
+}
