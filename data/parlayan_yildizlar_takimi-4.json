@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "parlayan_yildizlar_takimi",
+  "risk": "3",
+  "title": "Unauthorized Access to setCurves Function",
+  "issueId": 4,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/4"
+}
