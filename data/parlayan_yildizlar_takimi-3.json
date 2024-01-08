@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "parlayan_yildizlar_takimi",
+  "risk": "3",
+  "title": "Missing Revert Condition in onlyOwner Modifier",
+  "issueId": 3,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/3"
+}
