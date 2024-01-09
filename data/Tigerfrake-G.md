@@ -42,3 +42,35 @@ This [issue](https://github.com/code-423n4/2022-01-xdefi-findings/issues/128) de
 ### Instances:
 - https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L213
 - https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L246
+
+[G-5] We can save an entire SLOAD (2100 Gas) by short circuiting the operations
+
+### Description:
+The if statement has two checks:
+```Solidity
+        if (
+            protocolFeePercent_ +
+                feesEconomics.subjectFeePercent +
+                feesEconomics.referralFeePercent +
+                feesEconomics.holdersFeePercent >
+            feesEconomics.maxFeePercent ||
+            protocolFeeDestination_ == address(0)
+        ) revert InvalidFeeDefinition();
+```
+ where the first check involves making a `state read and carrying out additions then comparison` while the second check only `compares a function parameter to address(0)`.
+According to the rules of short circuit, if the first check is `true`, we do not have to do the second check thus in this case, we should make sure the first check is the cheapest to do.
+
+### Instances:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L129-L136
+
+### Recommendation:
+By reordering as shown below, we can avoid making the state read. 
+```Solidity
+        if (protocolFeeDestination_ == address(0) ||
+            protocolFeePercent_ +
+                feesEconomics.subjectFeePercent +
+                feesEconomics.referralFeePercent +
+                feesEconomics.holdersFeePercent >
+            feesEconomics.maxFeePercent ) revert InvalidFeeDefinition();
+```
+
