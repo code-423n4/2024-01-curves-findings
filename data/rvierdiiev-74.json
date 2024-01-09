@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "In case if feesEconomics.holdersFeePercent will be changed from 0 to some value, then user will lose rewards",
+  "issueId": 74,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/74"
+}
