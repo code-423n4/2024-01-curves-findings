@@ -31,3 +31,15 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L3
 
 ### Recommendation:
 Ensure that error handling is consistent throughout your system.
+
+# [04] Improper Input Validation. 
+
+### Description:
+The `updateFeeCredit()` function assumes that the `token` parameter refers to a `valid token`. If an `invalid token` is passed, the function will fail. Similarly, in the `claimFees()` function, it assumes that the `token` parameter refers to a `token that the sender owns`. If the sender does not own the `token`, the function will fail. 
+
+### Instances:
+- https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FFeeSplitter.sol#L63-L71
+- https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FFeeSplitter.sol#L80-L87
+
+### Recommendation:
+It's generally a good idea to validate inputs before performing operations on them.
