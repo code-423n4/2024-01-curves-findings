@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "Funds can get stuck in FeeSplitter if user buys token twice.",
+  "issueId": 10,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/10"
+}
