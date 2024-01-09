@@ -20,3 +20,14 @@ Given that NatSpec is an important part of code documentation, this affects code
 
 ### Recommendation:
 Consider adding in full `NatSpec` comments for all functions to have complete code documentation for future use.
+
+# [03] Missing Error Handling.
+
+### Description:
+The contract uses `custom errors` defined in the `CurvesErrors interface`, but it doesn't handle all possible errors. For instance, it doesn't handle potential errors during token transfers in the `_transfer()` function.
+
+### Instances:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L313-L325
+
+### Recommendation:
+Ensure that error handling is consistent throughout your system.
