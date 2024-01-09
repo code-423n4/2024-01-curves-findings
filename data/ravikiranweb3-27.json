@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ravikiranweb3",
+  "risk": "3",
+  "title": "Curves contract's owner role functions are properly restricted and hence any one can call those functions.",
+  "issueId": 27,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/27"
+}
