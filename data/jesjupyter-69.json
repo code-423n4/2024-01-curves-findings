@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "Direct ownership Transfer instead of 2-step transfer could lead to ownership lost",
+  "issueId": 69,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/69"
+}
