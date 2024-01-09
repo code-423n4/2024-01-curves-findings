@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pipoca",
+  "risk": "3",
+  "title": "Unrestricted Access Control in setCurves Function of FeeSplitter.sol",
+  "issueId": 64,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/64"
+}
