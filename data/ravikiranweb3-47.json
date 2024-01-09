@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ravikiranweb3",
+  "risk": "2",
+  "title": "Curves::getPrice function for selling takes out the transaction amount from supply before the transaction, returns worst price",
+  "issueId": 47,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/47"
+}
