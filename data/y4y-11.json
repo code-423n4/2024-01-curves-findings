@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "y4y",
+  "risk": "3",
+  "title": "`onlyOwner and onlyManager modifier in Security.sol is coded incorrectly, causing the modifier dysfunctional",
+  "issueId": 11,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/11"
+}
