@@ -1,4 +1,4 @@
-# [L-01] Unbounded loop
+# [01] Unbounded loop
 
 ### Description:
 
@@ -8,3 +8,15 @@ If the array grows too large, calling relevant functions might run out of gas an
 
 ### Instances:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L335
+
+[02] Missing or Incomplete NatSpec
+
+### Instances:
+All Contracts
+
+### Description
+Some functions are missing `@notice/@dev` NatSpec comments for the function, `@param` for all/some of their parameters and `@return` for return values. 
+Given that NatSpec is an important part of code documentation, this affects code comprehension, auditability and usability.
+
+### Recommendation:
+Consider adding in full `NatSpec` comments for all functions to have complete code documentation for future use.
