@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tadev",
+  "risk": "3",
+  "title": "DOS of Curves contract functionalities because 'addFee' and 'onBalanceChange' function in FeeSplitter contract are protected by the onlyManager modifier.",
+  "issueId": 80,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/80"
+}
