@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ravikiranweb3",
+  "risk": "3",
+  "title": "FeeSplitter::setCurves does not have any access control,anyone can replace curves contract",
+  "issueId": 15,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/15"
+}
