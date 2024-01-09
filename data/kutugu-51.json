@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "kutugu",
+  "risk": "3",
+  "title": "A malicious CurvesTokenSubject can exploit a sandwich attack to steal profits and reward funds",
+  "issueId": 51,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/51"
+}
