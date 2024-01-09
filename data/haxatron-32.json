@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "referralFeeDestination can be a contract that causes external call to revert, and therefore _transferFee to revert",
+  "issueId": 32,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/32"
+}
