@@ -6,7 +6,7 @@ Reading from storage costs gas. When you access a variable for the first time, i
 ### Instance:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L313-L325
 
-### Mitigation
+### Mitigation:
 ```Solidity
 function _transfer(address curvesTokenSubject, address from, address to, uint256 amount) internal {
    uint256 fromBalance = curvesTokenBalance[curvesTokenSubject][from];
@@ -23,4 +23,14 @@ function _transfer(address curvesTokenSubject, address from, address to, uint256
    emit Transfer(curvesTokenSubject, from, to, amount);
 }
 ```
-> In this modified version, fromBalance is a local variable that stores the sender's balance. The balance is updated once, rather than being accessed twice. This can lead to a small reduction in gas costs, especially if the balance is a large number
+> In this modified version, fromBalance is a local variable that stores the sender's balance. The balance is updated once, rather than being accessed twice. This can lead to a small reduction in gas costs, especially if the balance is a large number. 
+
+# [G-2] Use constants instead of type(uintX).max
+
+### Description:
+Using `constants` instead of `type(uintX).max` saves gas in Solidity. This is because the `type(uintX).max` function has to dynamically calculate the maximum value of a `uint256`, which can be expensive in terms of gas. `Constants`, on the other hand, are stored in the `bytecode` of your contract, so they do not have to be recalculated every time you need them. 
+Saves 13 GAS. 
+
+### Instances:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L389
+
