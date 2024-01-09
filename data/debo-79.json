@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "debo",
+  "risk": "3",
+  "title": "[H-01] Violation of Checks-Effects-Interaction pattern in Curves contract",
+  "issueId": 79,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/79"
+}
