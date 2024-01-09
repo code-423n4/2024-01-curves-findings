@@ -1,0 +1,11 @@
+{
+  "contest": 316,
+  "handle": "LightChaser",
+  "crew": [
+    "ChaseTheLight"
+  ],
+  "risk": "2",
+  "title": "Use call instead of transfer on payable addresses",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/19"
+}
