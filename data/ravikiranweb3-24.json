@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ravikiranweb3",
+  "risk": "3",
+  "title": "FeeSplitter contract's onlyManager() restricted functions are not really protected. ",
+  "issueId": 24,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/24"
+}
