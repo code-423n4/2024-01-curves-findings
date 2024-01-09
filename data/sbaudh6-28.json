@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "sbaudh6",
+  "risk": "3",
+  "title": "Missing Zero Address check leads to Permanently Loss of Ownership",
+  "issueId": 28,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/28"
+}
