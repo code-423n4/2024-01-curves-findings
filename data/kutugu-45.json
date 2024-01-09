@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "kutugu",
+  "risk": "3",
+  "title": "Attackers can manipulate totalSupply to obtain additional rewards",
+  "issueId": 45,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/45"
+}
