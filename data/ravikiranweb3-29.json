@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ravikiranweb3",
+  "risk": "3",
+  "title": "Curves contract does not restrict the access to onlyManager related functionality, the functionality is available to anyone",
+  "issueId": 29,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/29"
+}
