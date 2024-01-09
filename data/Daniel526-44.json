@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Daniel526",
+  "risk": "2",
+  "title": "_buyCurvesToken does not fail if first buy is not 1 tokens ex 0",
+  "issueId": 44,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/44"
+}
