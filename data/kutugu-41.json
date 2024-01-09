@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "kutugu",
+  "risk": "3",
+  "title": "The transferCurvesToken did not call onBalanceChange to update, resulting in the possibility of stealing all funds.",
+  "issueId": 41,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/41"
+}
