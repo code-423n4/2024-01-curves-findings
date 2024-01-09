@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "sellCurvesToken has no slippage checks which can lead to a sandwich attack",
+  "issueId": 13,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/13"
+}
