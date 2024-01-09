@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "petro_1912",
+  "risk": "2",
+  "title": "If a user sells a curveTokenSubject, the protocol fee will be ignored and locked in Curves contract.",
+  "issueId": 55,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/55"
+}
