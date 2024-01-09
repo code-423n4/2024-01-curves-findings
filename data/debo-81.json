@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "debo",
+  "risk": "3",
+  "title": "[H-02] Re-entrancy vulnerability in FeeSplitter contract and claimFees function",
+  "issueId": 81,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/81"
+}
