@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "lil_eth",
+  "risk": "3",
+  "title": "Seller can be deducted from fees that does not exists",
+  "issueId": 133,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/133"
+}
