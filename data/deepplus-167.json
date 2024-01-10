@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "deepplus",
+  "risk": "3",
+  "title": "`setCurves` function of `FeeSplitter` contract should be protected by a trusted role.",
+  "issueId": 167,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/167"
+}
