@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Astha",
+  "risk": "3",
+  "title": "AccessControl issue, modifier does not have any check to restrict others user from accessing onlyOwner contract",
+  "issueId": 148,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/148"
+}
