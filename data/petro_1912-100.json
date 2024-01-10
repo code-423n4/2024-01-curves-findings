@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "petro_1912",
+  "risk": "2",
+  "title": "Token holder can receive more than the holdersFee suggested by the protocol by exploiting the Curves.sellCurvesToken() function.",
+  "issueId": 100,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/100"
+}
