@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "Protocol does not refund users excess ETH when buying tokens leading to locked funds if price decreases.",
+  "issueId": 112,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/112"
+}
