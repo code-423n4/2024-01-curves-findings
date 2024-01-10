@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tadev",
+  "risk": "2",
+  "title": "'buyCurvesTokenForPresale' and 'buyCurvesTokenWithName' functions, which take an 'amount' as argument, will revert systematically revert if amount != 1",
+  "issueId": 162,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/162"
+}
