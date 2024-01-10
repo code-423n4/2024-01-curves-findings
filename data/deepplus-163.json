@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "deepplus",
+  "risk": "2",
+  "title": "In `_buyCurvesToken` function, the left amount of ETH sent by the buyer is not refunded to him.",
+  "issueId": 163,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/163"
+}
