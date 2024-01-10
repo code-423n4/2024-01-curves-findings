@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "deepplus",
+  "risk": "3",
+  "title": "When an account sell its curves token, the protocol fee is not transfered to `protocolFeeDestination`.",
+  "issueId": 164,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/164"
+}
