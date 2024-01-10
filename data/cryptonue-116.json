@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "cryptonue",
+  "risk": "3",
+  "title": "Wrong `onlyManager` modifier implementation",
+  "issueId": 116,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/116"
+}
