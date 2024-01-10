@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "israeladelaja",
+  "risk": "2",
+  "title": "FeeSplitter.getUserTokens() function returns faulty information",
+  "issueId": 104,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/104"
+}
