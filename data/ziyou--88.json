@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ziyou-",
+  "risk": "2",
+  "title": "The function \"getFees()\" lacks a minimum value setting for the \"totalFee\" parameter",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/88"
+}
