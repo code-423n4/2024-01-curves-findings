@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "aslanbek",
+  "risk": "2",
+  "title": "Adversary can DoS all new CURVES deployments by frontrunning them ",
+  "issueId": 122,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/122"
+}
