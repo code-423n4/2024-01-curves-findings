@@ -1,4 +1,4 @@
-**Analysis Report for Curves.sol**
+## **Analysis Report for Curves.sol**
 
 ### Overview:
 The provided Solidity contract appears to be a part of a token ecosystem that involves the creation and management of custom tokens (referred to as CURVES tokens) and a decentralized exchange mechanism for trading these tokens. The contract is relatively complex and incorporates various features, including token creation, presale functionalities, fee distribution, and more.
@@ -46,7 +46,57 @@ The provided Solidity contract appears to be a part of a token ecosystem that in
 ### Conclusion:
 The contract appears to provide a comprehensive set of functionalities for managing custom tokens and supporting presales.
 
+## **Analysis Report for FeeSplitter.sol**
+
+### Overview:
+The provided Solidity contract, `FeeSplitter.sol`, appears to be a component of a larger system for fee distribution among token holders. It is designed to work with the `Curves` contract and employs a mechanism for claiming and distributing fees among users holding various tokens.
+
+### High-Level Observations:
+
+1. **Inheritance and Dependencies:**
+   - The contract inherits from `Security`, indicating a dependency on security-related functionalities.
+   - It imports the `Curves.sol` contract and relies on it for various token-related operations.
+
+2. **State Variables:**
+   - `curves`: A state variable representing the instance of the `Curves` contract, indicating the integration between the two contracts.
+   - `PRECISION`: A constant representing the precision factor used in fee calculations.
+
+3. **Structs and Enums:**
+   - Two structs (`TokenData` and `UserClaimData`) are defined to organize and store fee-related data.
+
+4. **Mapping and Event:**
+   - `tokensData`: A mapping storing information about cumulative fees, user offsets, and unclaimed fees for each token.
+   - `userTokens`: A mapping associating users with the tokens they hold.
+   - `FeesClaimed` event: Emitted when a user claims fees.
+
+5. **Functions:**
+   - `setCurves`: Allows setting the `Curves` contract address.
+   - `balanceOf`, `totalSupply`: View functions providing information about token balances and total supplies.
+   - `getUserTokens`, `getUserTokensAndClaimable`: Functions for retrieving user-held tokens and associated claimable fees.
+   - `updateFeeCredit`: Internal function to update user fee credits.
+   - `getClaimableFees`: View function to calculate claimable fees for a user.
+   - `claimFees`: Allows users to claim their fees.
+   - `addFees`: Allows the addition of fees to the contract.
+   - `onBalanceChange`: Called when a user's balance changes, updating user fee offsets.
+   - `batchClaiming`: Allows batch claiming of fees for multiple tokens.
+
+6. **Fallback Function:**
+   - The contract includes a receive function to handle incoming Ether transfers.
+
+### Identified Issues:
+
+1. **Potential Gas Limit Issues:**
+   - The `batchClaiming` function could face gas limit issues when processing a large number of tokens, resulting in transactions failing.
+   - Recommendation: Consider batch processing with a limit or optimize the function to handle a larger number of tokens efficiently.
+
+2. **Fallback Function Handling:**
+   - The contract handles Ether transfers in the `receive` function, but there is no explicit handling of unexpected Ether transfers in the fallback function.
+   - Recommendation: Implement a payable fallback function with proper handling and logging.
+
+### Conclusion:
+The `FeeSplitter.sol` contract plays a crucial role in managing fee distribution among token holders, particularly in conjunction with the `Curves` contract. While the contract design is generally sound, addressing the identified issues is recommended to enhance the contract's robustness and usability.
+
 
 
 ### Time spent:
-5 hours
+12 hours
