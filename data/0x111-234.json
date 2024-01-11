@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0x111",
+  "risk": "3",
+  "title": "Holder loses the ability to claim holder fees for tokens he had before buying new ones",
+  "issueId": 234,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/234"
+}
