@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "L0s1",
+  "risk": "3",
+  "title": "The setCurves function in the FeeSplitter contract lacks permission validation",
+  "issueId": 178,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/178"
+}
