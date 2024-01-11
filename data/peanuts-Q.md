@@ -77,7 +77,7 @@ It is mentioned in the medium article:
 
 https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L263-L280
 
-### [L-04] Buying share tokens is vulnerable to sandwich attacks since no slippage is given
+### [L-04] Buying/selling share tokens is vulnerable to sandwich attacks since no slippage and deadline is given
 
 Anyone can buy a share from a particular share subject. Everytime a share is bought, the price of the share will increase. 
 
@@ -95,9 +95,17 @@ Granted, it may not be useful for anyone to conduct a sandwich attack because th
         if (msg.value < price + totalFee) revert InsufficientPayment();
 ```
 
+The more prominent issue is when a user decides to sell a share and is frontrunned by a whale selling his share. Since there is no msg.value or any minAmountOut input, the seller will get what is returned from the function.
+
+For example, there are 1000 supply, and user A has 1 supply. He decides to sell his share, which is worth 5 ether. Before he sells, he is frontrunned by a whale with 500 shares. When it was user A's turn to sell his share, he was only given 2 ether, instead of 5 ether.
+
+Consider adding a minAmountOut parameter / deadline when selling tokens so that the user can decide not to sell the token if the price is too low. 
+
+The deadline also matters because if the user tries to sell a token but gives a low gas fee, the function will be in the mempool for a long while. By the time the function is executed, the price may be too low.
+
 https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L263-L270
 
-### [L-05] The last person that owns a share cannot sell the share
+### [L-05] The last person that owns a share cannot sell the share. However, he can tokenize the last share and sell it on external markets.
 
 This is a common known issue in friend.tech, where the last share cannot be sold. Not sure about the reason why, but the economic damage caused will not amount to much since its the last (first) share of the subject. 
 
@@ -106,6 +114,8 @@ This is a common known issue in friend.tech, where the last share cannot be sold
         uint256 supply = curvesTokenSupply[curvesTokenSubject];
         if (supply <= amount) revert LastTokenCannotBeSold();
 ```
+
+The last person can sidestep the issue by tokenizing the last share and selling it on external market.
 
 https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L284
 
