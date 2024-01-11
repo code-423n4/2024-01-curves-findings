@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pkqs90",
+  "risk": "2",
+  "title": "The sell function is likely to be front-run, users may receive payment less than what he expected.",
+  "issueId": 203,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/203"
+}
