@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "EV_om",
+  "risk": "3",
+  "title": "Unrestricted access to `setCurves()` allows anyone to drain the `FeeSplitter` contract",
+  "issueId": 246,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/246"
+}
