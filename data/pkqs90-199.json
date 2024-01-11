@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pkqs90",
+  "risk": "3",
+  "title": "Referal fees will be lost if global referralFeePercent is set but token's referralFeeDestination is not.",
+  "issueId": 199,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/199"
+}
