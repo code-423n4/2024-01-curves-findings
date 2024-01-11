@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "Curve token subject can grief the selling process by creating a malicious attack contract that reverts any incoming eth.",
+  "issueId": 261,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/261"
+}
