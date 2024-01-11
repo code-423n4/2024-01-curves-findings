@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "developerjordy",
+  "risk": "3",
+  "title": "referralFee is not properly paid out when selling tokens, results in stuck ETH `Curves`",
+  "issueId": 197,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/197"
+}
