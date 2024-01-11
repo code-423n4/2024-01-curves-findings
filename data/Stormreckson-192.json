@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Stormreckson",
+  "risk": "3",
+  "title": "`batchClaiming` function is missing the `getUserToken` function call which leads to theft of other users fees and out of gas issues.",
+  "issueId": 192,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/192"
+}
