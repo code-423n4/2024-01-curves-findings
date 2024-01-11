@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "cccz",
+  "risk": "3",
+  "title": "_transfer does not call onBalanceChange to update rewards",
+  "issueId": 226,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/226"
+}
