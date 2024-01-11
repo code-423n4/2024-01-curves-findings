@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Oxsadeeq",
+  "risk": "3",
+  "title": "Users that holds custody of less 1e18 of ExternalCurves Token wouldn't be able to sell to recover back their ETH",
+  "issueId": 210,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/210"
+}
