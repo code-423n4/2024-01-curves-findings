@@ -283,3 +283,62 @@ When the 999 token become untokenized, `getClaimableFees()` will count the owed 
 Consider taking all the total supply instead of differentiating the tokenized and untokenized share.
 
 https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/FeeSplitter.sol#L43-L46
+
+### [L-11] `_curvesTokenCounter` doesn't really make sense as subjects who set their own symbol will not increase the counter.
+
+```
+ function _deployERC20(
+        address curvesTokenSubject,
+        string memory name,
+        string memory symbol
+    ) internal returns (address) {
+        // If the token's symbol is CURVES, append a counter value
+>       if (keccak256(bytes(symbol)) == keccak256(bytes(DEFAULT_SYMBOL))) {
+>           _curvesTokenCounter += 1;
+```
+
+The `_curvesTokenCounter` only increments if the symbol == DEFAULT_SYMBOL.
+
+DEFAULT_SYMBOL is used when a normal user calls withdraw().
+
+If the original subject calls `buyCurvesTokenWithName()` and sets his own symbol, the `_curvesTokenCounter` will not increase.
+
+```
+    function buyCurvesTokenWithName(
+        address curvesTokenSubject,
+        uint256 amount,
+        string memory name,
+        string memory symbol
+    ) public payable {
+        uint256 supply = curvesTokenSupply[curvesTokenSubject];
+        if (supply != 0) revert CurveAlreadyExists();
+
+        _buyCurvesToken(curvesTokenSubject, amount);
+ >      _mint(curvesTokenSubject, name, symbol);
+    }
+```
+
+```
+    function _mint(
+        address curvesTokenSubject,
+        string memory name,
+        string memory symbol
+    ) internal onlyTokenSubject(curvesTokenSubject) {
+        if (externalCurvesTokens[curvesTokenSubject].token != address(0)) revert ERC20TokenAlreadyMinted();
+>       _deployERC20(curvesTokenSubject, name, symbol);
+    }
+```
+
+Also, the comments states that _curvesTokenCounter is the counter for CURVES tokens minted.
+
+```
+    // Counter for CURVES tokens minted
+    uint256 private _curvesTokenCounter = 0;
+```
+
+But the variable does not correspond to the amount of CURVES tokens minted.
+
+Not so sure what is the purpose of the variable, because at it's current state, it will cause confusion.
+
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L46-L47
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L338-L350
