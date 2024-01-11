@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "EV_om",
+  "risk": "3",
+  "title": "Unrestricted claiming of fees due to missing balance updates in `FeeSplitter`",
+  "issueId": 247,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/247"
+}
