@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "peanuts",
+  "risk": "3",
+  "title": "FeeSplitter.setCurves has no modifier, malicious users can create a attack contract to drain the funds in fee splitter",
+  "issueId": 257,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/257"
+}
