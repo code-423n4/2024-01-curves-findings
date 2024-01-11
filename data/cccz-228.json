@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "When selling CurvesToken without defining referrer, the referral fee will be locked in the contract",
+  "issueId": 228,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/228"
+}
