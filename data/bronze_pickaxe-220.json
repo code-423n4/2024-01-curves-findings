@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "bronze_pickaxe",
+  "risk": "3",
+  "title": "'tokenSubject' is able to DoS his 'curvesToken' at any moment",
+  "issueId": 220,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/220"
+}
