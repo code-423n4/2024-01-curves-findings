@@ -85,8 +85,25 @@ The existence of the modifier makes the code both expensive and harder to follow
         );
     }
 ```
+6. [Curves.sol#L364-L375](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L364-L375)
 
-# G-02 excessive checks
+`buyCurvesTokenWithName` reverts if `supply > 0`. When `supply == 0`, `_buyCurvesToken` reverts if called by non-subject:
+```solidity
+        if (!(supply > 0 || curvesTokenSubject == msg.sender)) revert UnauthorizedCurvesTokenSubject();
+```
+Thus, `curvesTokenSubject` can be safely replaced with `msg.sender`:
+
+```diff
+    function buyCurvesTokenWithName(
+-       address curvesTokenSubject,
+        uint256 amount,
+        string memory name,
+        string memory symbol
+    ) public payable {
+-       uint256 supply = curvesTokenSupply[curvesTokenSubject];
++       uint256 supply = curvesTokenSupply[msg.sender];
+```
+# G-02 Redundant checks
 1. [Curves.sol#L497-L501](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L497-L501)
 ```diff
     function deposit(address curvesTokenSubject, uint256 amount) public {
