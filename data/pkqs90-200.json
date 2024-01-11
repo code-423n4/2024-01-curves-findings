@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pkqs90",
+  "risk": "3",
+  "title": "Holder fees are locked up if the contract sets holdersFee but doesn't set feeRedistributor.",
+  "issueId": 200,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/200"
+}
