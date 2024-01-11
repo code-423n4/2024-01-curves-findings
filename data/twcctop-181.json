@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "twcctop",
+  "risk": "2",
+  "title": " Duplicate token push in array will cause run out of gas when call `getUserTokensAndClaimable`",
+  "issueId": 181,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/181"
+}
