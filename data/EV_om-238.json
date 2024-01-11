@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "EV_om",
+  "risk": "2",
+  "title": "`mint()` and `buyCurvesTokenWithName()` are vulnerable to DOS via frontrunning",
+  "issueId": 238,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/238"
+}
