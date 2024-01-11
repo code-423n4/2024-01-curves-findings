@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "developerjordy",
+  "risk": "2",
+  "title": "When holdersFeePercent is set, but feeRedistributor is not set, _transferFees should revert",
+  "issueId": 214,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/214"
+}
