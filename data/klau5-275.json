@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "_transferFees: onBalanceChange does not settle unclaimedFees and only update userFeeOffset, causing the user to lose the holder fee they should have received",
+  "issueId": 275,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/275"
+}
