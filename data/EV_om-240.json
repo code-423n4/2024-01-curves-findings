@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "EV_om",
+  "risk": "3",
+  "title": "Griefing/DOS attack on users owning new tokens due to unbounded loop",
+  "issueId": 240,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/240"
+}
