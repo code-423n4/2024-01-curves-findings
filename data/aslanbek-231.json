@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "aslanbek",
+  "risk": "2",
+  "title": "setWhitelist overshoots with checking the occurence of non-owner mintings",
+  "issueId": 231,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/231"
+}
