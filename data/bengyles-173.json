@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "bengyles",
+  "risk": "3",
+  "title": "FeeSplitter.sol::setCurves doesn't have access control or zero address check",
+  "issueId": 173,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/173"
+}
