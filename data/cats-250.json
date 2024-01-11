@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "cats",
+  "risk": "3",
+  "title": "Anyone can change Curves implementation address in `FeeSplitter.sol#setCurves()`:",
+  "issueId": 250,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/250"
+}
