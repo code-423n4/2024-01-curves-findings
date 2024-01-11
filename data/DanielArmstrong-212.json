@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DanielArmstrong",
+  "risk": "3",
+  "title": "Curves.sol#_transferFees function will lock protocol fee in the contract when selling curves tokens.",
+  "issueId": 212,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/212"
+}
