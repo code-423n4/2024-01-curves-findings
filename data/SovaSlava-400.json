@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "SovaSlava",
+  "risk": "3",
+  "title": "The user may significantly overpay when buy tokens. Excess funds will remain blocked on the contract",
+  "issueId": 400,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/400"
+}
