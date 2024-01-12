@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BowTiedOriole",
+  "risk": "3",
+  "title": "`FeeSplitter.onBalanceChange()` is not called when transferring Curve tokens, allowing any user to repeatedly claim fees",
+  "issueId": 375,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/375"
+}
