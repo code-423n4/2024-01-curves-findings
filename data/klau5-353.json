@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "_addOwnedCurvesTokenSubject: transfer zero amount cause DoS",
+  "issueId": 353,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/353"
+}
