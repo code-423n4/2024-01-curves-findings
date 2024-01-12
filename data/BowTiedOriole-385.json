@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BowTiedOriole",
+  "risk": "2",
+  "title": "`Curves.buyCurvesToken()` does not refund excess ETH causing a user to lose ETH if a sell transaction is confirmed prior to their buy transaction",
+  "issueId": 385,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/385"
+}
