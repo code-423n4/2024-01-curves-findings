@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "KmanOfficial",
+  "risk": "2",
+  "title": "If no referral or holder fee transfer destination address is defined but holder or referral fee is more than 0%, ETH is lost in the contract which could be revenue for the seller of a curve token instead.",
+  "issueId": 341,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/341"
+}
