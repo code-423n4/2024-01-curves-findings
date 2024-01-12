@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "zaevlad",
+  "risk": "2",
+  "title": "Users can block other users from deploying new CurvesERC20 contract",
+  "issueId": 348,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/348"
+}
