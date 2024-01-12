@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "hals",
+  "risk": "2",
+  "title": "Users can be griefed by any malicious actor via `transferCurvesToken` to increase the cost of their interactions with the protocol",
+  "issueId": 293,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/293"
+}
