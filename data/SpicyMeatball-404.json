@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "SpicyMeatball",
+  "risk": "3",
+  "title": "Protocol is not updating data.userFeeOffset on curve token transfers to another accounts which leads to reward theft from the FeeSplitter",
+  "issueId": 404,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/404"
+}
