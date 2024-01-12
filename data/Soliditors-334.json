@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Soliditors",
+  "risk": "3",
+  "title": "Any user can manipulate rewards distribution in FeeSplitter, buying shares with 2 addresses and transferring from one to the other before calling 'claimFees' function. ",
+  "issueId": 334,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/334"
+}
