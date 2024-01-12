@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nuthan2x",
+  "risk": "2",
+  "title": "A subject creator within a single block can claim holder fees without holding due to unprotected reentrancy path",
+  "issueId": 386,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/386"
+}
