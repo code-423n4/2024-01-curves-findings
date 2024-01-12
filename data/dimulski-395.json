@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "dimulski",
+  "risk": "2",
+  "title": "Missing slippage protection in sellCurvesToken can result a user selling his token for a smaller price",
+  "issueId": 395,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/395"
+}
