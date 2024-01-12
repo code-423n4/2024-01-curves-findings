@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BugzyVonBuggernaut",
+  "risk": "3",
+  "title": "curvesTokenSubject can DOS the buying and selling of their token in Curves.sol",
+  "issueId": 321,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/321"
+}
