@@ -45,7 +45,7 @@ The `verifyMerkle` function should be called way sooner, if the `proof` input is
 
 ##### [G-03] `Curves::deposit` function can be optimized.
 
-The two checks related to `InsufficientBalance()` and `TokenAbsentForCurvesTokenSubject()` should be placed before the `tokenAmount ` initialization.
+The two checks related to `InsufficientBalance()` and `TokenAbsentForCurvesTokenSubject()` should be placed before the `tokenAmount`  initialization.
 
 ```
 
