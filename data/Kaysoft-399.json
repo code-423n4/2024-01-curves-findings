@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kaysoft",
+  "risk": "2",
+  "title": "Malicious curve address can be set on the FeeSplitter.sol contract because the  setCurves(...) function lacks access control",
+  "issueId": 399,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/399"
+}
