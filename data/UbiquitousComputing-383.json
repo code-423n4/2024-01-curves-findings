@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "UbiquitousComputing",
+  "risk": "3",
+  "title": "Incorrect fee accounting will lead to Ethers stuck in the contract upon token selling",
+  "issueId": 383,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/383"
+}
