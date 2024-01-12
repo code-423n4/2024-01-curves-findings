@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "KupiaSec",
+  "risk": "3",
+  "title": "Function `FeeSplitter.setCurves` contract should be protected.",
+  "issueId": 314,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/314"
+}
