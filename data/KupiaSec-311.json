@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "KupiaSec",
+  "risk": "2",
+  "title": "In `Curves._buyCurvesToken` function, the left amount of ETH sent by the buyer should be refuned.",
+  "issueId": 311,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/311"
+}
