@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BugzyVonBuggernaut",
+  "risk": "2",
+  "title": "User's will lose corresponding fee redistributions if they interact with buyCurvesToken or sellCurvesToken more than once for a given curvesTokenSubject.",
+  "issueId": 304,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/304"
+}
