@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "hals",
+  "risk": "2",
+  "title": "Selling and buying subject tokens will be DoSed when the minted external ERC20 equals the subject supply",
+  "issueId": 296,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/296"
+}
