@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "dimulski",
+  "risk": "3",
+  "title": "Missing modifier in setCurves() allows a malicious user to perform different detrimental for the protocol actions",
+  "issueId": 380,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/380"
+}
