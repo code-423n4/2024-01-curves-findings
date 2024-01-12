@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Mylifechangefast_eth",
+  "risk": "2",
+  "title": "Same symbols cannot can be reused across different curves because of global uniqueness of symbol ",
+  "issueId": 407,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/407"
+}
