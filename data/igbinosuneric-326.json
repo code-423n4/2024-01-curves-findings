@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "igbinosuneric",
+  "risk": "3",
+  "title": "Reentrancy - Unauthorized token transfer, loss of funds. ",
+  "issueId": 326,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/326"
+}
