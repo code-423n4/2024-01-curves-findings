@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BowTiedOriole",
+  "risk": "2",
+  "title": "Selling will be bricked if all other tokens are withdrawn to ERC20 token",
+  "issueId": 378,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/378"
+}
