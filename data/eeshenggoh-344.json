@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "eeshenggoh",
+  "risk": "3",
+  "title": "The transfer with referral defined does not include the referral fee, the logic is complete opposite",
+  "issueId": 344,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/344"
+}
