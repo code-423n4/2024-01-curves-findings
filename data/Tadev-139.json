@@ -1,8 +1,0 @@
-{
-  "contest": 316,
-  "handle": "Tadev",
-  "risk": "2",
-  "title": "'onBalanceChange' function in FeeSplitter contract does not work properly, with 'userTokens' mapping continuously filled and never emptied.",
-  "issueId": 139,
-  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/139"
-}
