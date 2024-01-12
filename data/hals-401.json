@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "hals",
+  "risk": "2",
+  "title": "`Curves._transferFees`: unutilized/un-sent native tokens will be stuck in the contract",
+  "issueId": 401,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/401"
+}
