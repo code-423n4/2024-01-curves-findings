@@ -1,4 +1,4 @@
-# [L-01] All excess `msg.value` accumulated in `Curves.sol` will be stuck forever:
+# [L-01] All excess `msg.value` accumulated in `Curves.sol` will be stuck forever if not refunded
 
 # Vulnerability Details
 When a user buys a Curves token they are required to send in `msg.value >= price + totalFee`
@@ -56,3 +56,8 @@ Add logic to refund users.
         }
     }
 ```
+
+# [L-02] Add `curves` implementation to `FeeSplitter.sol` constructor
+
+# Vulnerability Details
+Currently the Fee Splitter contract is deployed without the Curves implementation in it's constructor. Several key functions in the contract need to reference back to the Curves Contract to work properly. This is an issue because if someone is trying to buy/sell a Curves Subject Token in the `Curves.sol` contract, at the end `FeeSplitter.sol#addFees()` is invoked which references back to Curves for some data and if the splitter is deployed with a non set (address0) Curves then the buy/sells will revert.
