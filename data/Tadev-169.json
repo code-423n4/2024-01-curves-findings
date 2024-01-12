@@ -1,8 +1,0 @@
-{
-  "contest": 316,
-  "handle": "Tadev",
-  "risk": "2",
-  "title": "'protocolFee' is subtracted from the sell price to obtain 'sellValue' in '_transferFees' function, leading to loss of funds for the user and ETH stuck on Curves contract for each sell.",
-  "issueId": 169,
-  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/169"
-}
