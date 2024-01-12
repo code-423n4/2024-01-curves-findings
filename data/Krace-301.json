@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Krace",
+  "risk": "2",
+  "title": "Users cannot sell all his curvesToken when there are locked curvesToken in Curves",
+  "issueId": 301,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/301"
+}
