@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Krace",
+  "risk": "3",
+  "title": "Users can steal fees by transferring CurveTokens after claiming the fees",
+  "issueId": 289,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/289"
+}
