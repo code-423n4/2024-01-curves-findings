@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "KupiaSec",
+  "risk": "2",
+  "title": "`ownedCurvesTokenSubjects` for account is pushed but never poped and this may lead to  a DoS if account tries to purchase new curves tokens.",
+  "issueId": 313,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/313"
+}
