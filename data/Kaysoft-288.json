@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kaysoft",
+  "risk": "3",
+  "title": "All onlyOwner and OnlyManager protected functions in Curves.sol and FeeSplitter.sol can be executed by anyone.",
+  "issueId": 288,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/288"
+}
