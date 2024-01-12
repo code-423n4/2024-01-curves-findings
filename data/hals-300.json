@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "hals",
+  "risk": "2",
+  "title": "Malicious subject can trick users to buy it but never be able to sell it",
+  "issueId": 300,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/300"
+}
