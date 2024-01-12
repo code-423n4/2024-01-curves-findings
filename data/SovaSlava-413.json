@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "SovaSlava",
+  "risk": "2",
+  "title": "If referralFee > 0, but referralFeeDestination is zero address, funds will remain on the contract. Only on sale",
+  "issueId": 413,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/413"
+}
