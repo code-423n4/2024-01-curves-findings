@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "igbinosuneric",
+  "risk": "3",
+  "title": "Functions in the Curves.sol contract do not have access control and can be called from any address ",
+  "issueId": 388,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/388"
+}
