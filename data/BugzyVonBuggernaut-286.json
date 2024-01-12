@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BugzyVonBuggernaut",
+  "risk": "3",
+  "title": "Incorrectly implemented modifiers in Security.sol allow any address to call functions that are supposed to be restricted",
+  "issueId": 286,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/286"
+}
