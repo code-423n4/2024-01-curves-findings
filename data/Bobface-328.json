@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Bobface",
+  "risk": "3",
+  "title": "No slippage protection on buy and sell causes sandwich attacks",
+  "issueId": 328,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/328"
+}
