@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nuthan2x",
+  "risk": "2",
+  "title": "Anyone can create an external token for arbitrary subject even if the subject has never been created by is owner",
+  "issueId": 509,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/509"
+}
