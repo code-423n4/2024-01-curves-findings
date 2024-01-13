@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iamandreiski",
+  "risk": "3",
+  "title": "Due to flawed logic in holder's fee calculation/distribution, a malicious user can claim fees an arbitrary number of times until FeeSplitter.sol is drained/insolvent",
+  "issueId": 519,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/519"
+}
