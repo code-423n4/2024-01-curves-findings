@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DarkTower",
+  "risk": "2",
+  "title": "`Curves.sol::_transferFees` malicious `curvesTokenSubject` can rug users and render buys & sells to fail ",
+  "issueId": 523,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/523"
+}
