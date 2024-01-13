@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "CurvesERC20’s constructor don't init owner",
+  "issueId": 452,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/452"
+}
