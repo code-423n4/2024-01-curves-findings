@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "spacelord47",
+  "risk": "2",
+  "title": "Improper tracking of user's owned tokens will result in accounting functions returning incorrect data",
+  "issueId": 537,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/537"
+}
