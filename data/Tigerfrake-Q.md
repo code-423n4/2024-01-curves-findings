@@ -9,7 +9,7 @@ If the array grows too large, calling relevant functions might run out of gas an
 ### Instances:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L335
 
-[02] Missing or Incomplete NatSpec
+# [02] Missing or Incomplete NatSpec
 
 ### Instances:
 All Contracts
