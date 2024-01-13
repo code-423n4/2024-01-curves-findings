@@ -33,3 +33,19 @@ G2. We can short circuit for the case of balance = 0 to save gas below:
     }
 
 ```
+
+Q3. claimFees() can be reimplemented to save gas - eliminate the call of getClaimableFees() as follows:
+
+```diff
+    function claimFees(address token) external {
+        updateFeeCredit(token, msg.sender);
+-        uint256 claimable = getClaimableFees(token, msg.sender);
++       uint256 claimable = tokensData[token].unclaimedFees[msg.sender]
+        if (claimable == 0) revert NoFeesToClaim();
+
+        tokensData[token].unclaimedFees[msg.sender] = 0;
+        payable(msg.sender).transfer(claimable);
+        emit FeesClaimed(token, msg.sender, claimable);
+    }
+
+```
