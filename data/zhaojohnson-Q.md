@@ -1,0 +1,1 @@
+-L01: need to update OwnedCurvesTokenSubject when we sell our CurveTokenSubject.
