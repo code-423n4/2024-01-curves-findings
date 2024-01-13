@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "SpicyMeatball",
+  "risk": "2",
+  "title": "_deployERC20 can be blocked by other users",
+  "issueId": 492,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/492"
+}
