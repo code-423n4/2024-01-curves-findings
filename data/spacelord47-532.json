@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "spacelord47",
+  "risk": "3",
+  "title": "Lack of access control on `setCurves` function allows attacker to steal users fees and DoS core functionality",
+  "issueId": 532,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/532"
+}
