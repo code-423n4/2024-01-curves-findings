@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "spacelord47",
+  "risk": "2",
+  "title": "Users able to set default `symbol` for their own ERC20 and block usage of `DEFAULT_SYMBOL` in contract",
+  "issueId": 534,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/534"
+}
