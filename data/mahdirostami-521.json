@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "mahdirostami",
+  "risk": "2",
+  "title": "Disallowing Purchase at Start Time in both `buyCurvesToken` and `buyCurvesTokenWhitelisted` Functions in Curves Contract",
+  "issueId": 521,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/521"
+}
