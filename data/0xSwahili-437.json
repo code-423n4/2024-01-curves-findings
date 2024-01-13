@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xSwahili",
+  "risk": "2",
+  "title": "Depositors can get zero curvesTokenBalance due to a rounding error",
+  "issueId": 437,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/437"
+}
