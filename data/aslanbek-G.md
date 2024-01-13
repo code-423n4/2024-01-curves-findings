@@ -133,7 +133,7 @@ Thus, `curvesTokenSubject` can be safely replaced with `msg.sender`:
     }
 ```
 `amount > balance` check is not needed - attempt to transfer more than balance will revert due to integer underflow.
-`from != to` check will be net negative for users, as they will rarely transfer to themselves.
+`from != to` check will be net negative for users, as they will rarely (if ever) transfer to themselves, and `_addOwnedCurvesTokenSubject` has the same check. 
 
 3. [Curves.sol#L213](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L213)
 ```diff
