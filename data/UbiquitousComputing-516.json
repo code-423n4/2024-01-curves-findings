@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "UbiquitousComputing",
+  "risk": "3",
+  "title": "Lack of slippage control allows stealing funds through arbitraging token sellers (or simply coincidental fund loss through timing)",
+  "issueId": 516,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/516"
+}
