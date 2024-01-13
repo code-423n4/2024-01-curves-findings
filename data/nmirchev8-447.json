@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nmirchev8",
+  "risk": "2",
+  "title": "Anybody can prevent `subjects`  from calling `buyCurvesTokenWithName` for first time by deploying erc20 with default values",
+  "issueId": 447,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/447"
+}
