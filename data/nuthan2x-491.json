@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nuthan2x",
+  "risk": "2",
+  "title": "User's selling transactions are prone to sandwich attacks due to missing slippage implementation",
+  "issueId": 491,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/491"
+}
