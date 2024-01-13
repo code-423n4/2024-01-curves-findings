@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "zh1x1an1221",
+  "risk": "3",
+  "title": "Permission control is invalid: Any account can bypass onlyOwner and onlyManager modifier in Security.sol file,and call privileged functions",
+  "issueId": 467,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/467"
+}
