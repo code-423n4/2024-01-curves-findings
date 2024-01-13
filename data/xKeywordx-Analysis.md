@@ -23,5 +23,7 @@
 
 **Recommended Mitigation:** Add events emission within these functions: `setFeeRedistributor`, `setProtocolFeePercent`, `setExternalFeePercent`, `setReferralFeeDestination`.
 
+
+
 ### Time spent:
-8 hours
+5 hours
