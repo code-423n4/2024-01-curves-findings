@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DanielArmstrong",
+  "risk": "2",
+  "title": "Attacker can prevent all other users from automatic creating their external curves token.",
+  "issueId": 455,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/455"
+}
