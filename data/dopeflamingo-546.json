@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "dopeflamingo",
+  "risk": "3",
+  "title": "Users `curvesToken` decrease in value when buying new ones as the old ones lose value.",
+  "issueId": 546,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/546"
+}
