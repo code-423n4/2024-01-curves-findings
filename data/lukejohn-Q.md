@@ -77,3 +77,5 @@ L241                  ? referralFeeDestination[curvesTokenSubject].call{value: r
 ```
 
 In summary, L241 might be failed by the referral contract. 
+
+QA5. For the Curves contract, there are several mappings that map from subjects to other components. They can be combined into one mapping that maps subjects to a struct. 
