@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "zhaojohnson",
+  "risk": "3",
+  "title": "protocolFeeDestination cannot receive protocol fee when sell curve. ",
+  "issueId": 451,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/451"
+}
