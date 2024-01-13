@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "erosjohn",
+  "risk": "2",
+  "title": "buyCurvesTokenForPresale and buyCurvesTokenWithName will revert due to arithmetic operation underflow when the input parameter amount is not 1, which may result in potential losses",
+  "issueId": 503,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/503"
+}
