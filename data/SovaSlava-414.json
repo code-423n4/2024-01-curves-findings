@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "SovaSlava",
+  "risk": "3",
+  "title": "The protocol does not receive a commission when a user sells tokens",
+  "issueId": 414,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/414"
+}
