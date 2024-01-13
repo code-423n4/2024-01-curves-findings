@@ -43,3 +43,14 @@ The `updateFeeCredit()` function assumes that the `token` parameter refers to a 
 
 ### Recommendation:
 It's generally a good idea to validate inputs before performing operations on them.
+
+# [05] Possible Unchecked Return Values.
+
+### Description:
+Several function calls within the contract do not check their return values. For instance, the `_transfer(), buyCurvesTokenWithName(),_addOwnedCurvesTokenSubject(), _deployERC20(),& buyCurvesTokenForPresale()` functions do not check whether the operations were successful or not. 
+
+### Instances:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L313-L392
+
+### Recommendation:
+> It would be better to add checks after these function calls to handle possible failures.
