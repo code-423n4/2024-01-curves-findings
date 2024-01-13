@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "SpicyMeatball",
+  "risk": "2",
+  "title": "onBalanceChange isn't called if holdersFeePercent = 0",
+  "issueId": 470,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/470"
+}
