@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DMoore",
+  "risk": "3",
+  "title": "Missing slippage checks when buying or selling Curves Token",
+  "issueId": 432,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/432"
+}
