@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "igbinosuneric",
+  "risk": "2",
+  "title": "Unauthorised access in the onlyOwner and onlyManager modifier in Security.sol",
+  "issueId": 484,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/484"
+}
