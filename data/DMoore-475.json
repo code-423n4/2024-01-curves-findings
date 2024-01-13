@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DMoore",
+  "risk": "3",
+  "title": "No access control on setCurves",
+  "issueId": 475,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/475"
+}
