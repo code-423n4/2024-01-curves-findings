@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DMoore",
+  "risk": "2",
+  "title": "Attackers can add arbitrary tokens to any user’s ownedCurvesTokenSubjects , resulting in possible DOS when users trying to call transferAllCurvesTokens",
+  "issueId": 442,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/442"
+}
