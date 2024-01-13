@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "salutemada",
+  "risk": "3",
+  "title": "All funds in FeeSplitter contract can be drained by a malicius user by incorrect logic in fees distribution",
+  "issueId": 512,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/512"
+}
