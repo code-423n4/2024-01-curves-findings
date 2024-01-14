@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Oxsadeeq",
+  "risk": "3",
+  "title": "Anyone could modify the curve address in FeeSpilter and replace it with a malicious Curve with unexpected behaviours",
+  "issueId": 713,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/713"
+}
