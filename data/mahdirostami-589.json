@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "mahdirostami",
+  "risk": "3",
+  "title": "Remainder of ETH not returned to user in _buyCurvesToken",
+  "issueId": 589,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/589"
+}
