@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "AmitN",
+  "risk": "3",
+  "title": "setCurves can be called by non admins",
+  "issueId": 612,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/612"
+}
