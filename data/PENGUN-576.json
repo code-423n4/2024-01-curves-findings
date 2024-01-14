@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "PENGUN",
+  "risk": "2",
+  "title": "Malicious user can DoS _deployERC20 to prevent withdrawals.",
+  "issueId": 576,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/576"
+}
