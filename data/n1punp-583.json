@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "n1punp",
+  "risk": "3",
+  "title": "`buyCurvesTokenWithName` will not function properly (tx revert), in case the caller is not `curvesTokenSubject` .",
+  "issueId": 583,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/583"
+}
