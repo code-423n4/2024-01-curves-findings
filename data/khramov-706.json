@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "khramov",
+  "risk": "2",
+  "title": "Holder fee is lost and stuck on the contract if `Curves.feeRedistributor` is not set",
+  "issueId": 706,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/706"
+}
