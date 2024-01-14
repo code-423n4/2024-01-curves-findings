@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kong",
+  "risk": "2",
+  "title": "When calling buyCurvesToken, funds exceeding price + totalFee cannot be refunded.",
+  "issueId": 634,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/634"
+}
