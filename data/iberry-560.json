@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "The startTime validation condition in the buyCurvesToken function can be bypassed due to an invalid validation.",
+  "issueId": 560,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/560"
+}
