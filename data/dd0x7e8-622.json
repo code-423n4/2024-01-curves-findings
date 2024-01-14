@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "dd0x7e8",
+  "risk": "3",
+  "title": "Protocol Fee NOT Transferred to Protocol Fee Destination During Selling And LOCKED in `Cruves` Contract",
+  "issueId": 622,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/622"
+}
