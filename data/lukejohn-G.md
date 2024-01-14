@@ -34,7 +34,7 @@ G2. We can short circuit for the case of balance = 0 to save gas below:
 
 ```
 
-Q3. claimFees() can be reimplemented to save gas - eliminate the call of getClaimableFees() as follows:
+G3. claimFees() can be reimplemented to save gas - eliminate the call of getClaimableFees() as follows:
 
 ```diff
     function claimFees(address token) external {
@@ -71,3 +71,7 @@ function batchClaiming(address[] calldata tokenList) external {
         payable(msg.sender).transfer(totalClaimable);
     }
 ```
+
+G4. _transfer() needs to check whether the target ``to`` has zero balance on the curvesToken, Only when it is zero there is a need to call _addOwnedCurvesTokenSubject(). Gas can be saved by adding this check. Also add a short circuit that if ``from == to`` then the function can return immediately. 
+
+[https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L317-L319](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L317-L319)
