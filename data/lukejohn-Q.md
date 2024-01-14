@@ -96,3 +96,6 @@ QA6. Curves._transferFees() fails to send the protocol fee to feesEconomics.prot
 [https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L218-L261](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L218-L261)
 
 Mitigation: calculate the protocol fee for both cases, and make sure the protocol fee is sent to feesEconomics.protocolFeeDestination for each case. 
+
+QA7. _buyCurvesToken() fails to check ``amount`` against ``presaleMeta[curvesTokenSubject].maxBuy``. As a result, a buyer might buy more than the ``maxBuy`` amount of CurvesTokens. 
+
