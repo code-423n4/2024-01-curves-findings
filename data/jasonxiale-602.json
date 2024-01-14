@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jasonxiale",
+  "risk": "3",
+  "title": "a malicious user can steal ETH from `FeeSplitter` contract by abusing `FeeSplitter.balanceOf` and `Curves.transferCurvesToken`",
+  "issueId": 602,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/602"
+}
