@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xLogos",
+  "risk": "2",
+  "title": "DoS curves withdraw and user griefing by OOG error because of loop",
+  "issueId": 585,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/585"
+}
