@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "mrudenko",
+  "risk": "3",
+  "title": "Risk of Funds Lock due to Malicious Referral Address in sellCurvesToken",
+  "issueId": 595,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/595"
+}
