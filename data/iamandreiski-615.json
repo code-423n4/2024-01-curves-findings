@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iamandreiski",
+  "risk": "2",
+  "title": "Accrued rewards in the FeeSplitter.sol can be sandwiched/stolen due to stepwise jumps in the balances and the way the claimable fee mechanism works",
+  "issueId": 615,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/615"
+}
