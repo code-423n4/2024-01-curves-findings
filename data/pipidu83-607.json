@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pipidu83",
+  "risk": "3",
+  "title": "Excess Ethereum is never refunded in buyCurvesToken, leading to user funds being locked.",
+  "issueId": 607,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/607"
+}
