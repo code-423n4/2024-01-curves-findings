@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jasonxiale",
+  "risk": "2",
+  "title": "`Curves.mint` can be bypassed by `Curves.withdraw` with 0 as **amount** parameter",
+  "issueId": 552,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/552"
+}
