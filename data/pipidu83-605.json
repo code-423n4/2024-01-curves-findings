@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pipidu83",
+  "risk": "2",
+  "title": "The ```buyCurvesToken``` will always revert if called when called with any amount different from ```1``` when ```curvesTokenSupply[curvesTokenSubject]``` is ```0```",
+  "issueId": 605,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/605"
+}
