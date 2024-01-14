@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "n1punp",
+  "risk": "3",
+  "title": "The user may not be able to buy new token subjects (tx revert), if the user is a heavy user in the protocol (is holding a lot of token subjects).",
+  "issueId": 561,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/561"
+}
