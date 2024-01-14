@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "XORs33r",
+  "risk": "3",
+  "title": "SetCurves Access Control Vulnerability Leading to Fee Theft",
+  "issueId": 599,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/599"
+}
