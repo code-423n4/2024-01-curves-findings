@@ -30,32 +30,6 @@ function setMaxFeePercent(uint256 maxFeePercent_) external onlyManager {
 }
 ```
 
-## Insufficient Check Condition in `buyCurvesToken()` Function
-The issue with the `buyCurvesToken()` function in the provided code snippet arises from an incorrect logic check pertaining to the `startTime` of a token sale. The original check is as follows:
-
-https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L213C1-L213C1
-
-```solidity
-        if (startTime != 0 && startTime >= block.timestamp) revert SaleNotOpen();
-```
-
-This condition checks if the `startTime` is not equal to zero and if the `startTime` is in the future relative to the current timestamp (`block.timestamp`). The implication here is that if `startTime` is not zero (which means a presale start time has been set) and the presale start time has not yet passed, then the sale is not open, and the function should revert.
-
-However, the issue with this logic is that it does not account for the scenario where `startTime` is exactly zero. In the context of the contract, a `startTime` of zero could be interpreted as the sale not being available or not yet scheduled. Thus, the sale should not be open in this case either.
-
-The corrected version of the check is:
-
-```solidity
-        if (startTime == 0 || startTime >= block.timestamp) revert SaleNotOpen();
-```
-
-This revised condition will revert the transaction if:
-
-1. The `startTime` is zero, which implies that no sale has been set up, or the presale is unavailable.
-2. The `startTime` is in the future, meaning the presale or sale has not yet started.
-
-By using the logical OR (`||`), the function correctly covers both scenarios where the sale should not be allowed to proceed, thus preventing premature token purchases and aligning with the intended sale schedule logic.
-
 ## Check-Effects-Interactions Pattern Violation
 The issue with the `_buyCurvesToken()` function, as described, arises from the order of operations, particularly the placement of the `_transferFees()` call before the state-modifying function `_addOwnedCurvesTokenSubject()`. This ordering could potentially make the function vulnerable to reentrancy attacks.
 
@@ -113,3 +87,45 @@ To address this issue and improve user experience:
 3. **Adjust Design**: If the intent is to allow subjects to buy more than one unit initially, the `getPrice()` function and other related logic should be adjusted to support this use case.
 
 By implementing these measures, the `Curves` contract can provide clarity and consistency to users, aligning with their expectations and preventing unexpected reverts due to underflows in the pricing calculation.
+
+## Duplicated Token Added in `userTokens` Array
+The issue with the `onBalanceChange()` function in the `FeeSplitter` contract is that it indiscriminately adds the `token` to the `userTokens[account]` array every time there is a balance change for an account that is non-zero. This can lead to the same `token` being added multiple times for the same account, resulting in a bloated and redundant array.
+
+Here's the problematic part of the function:
+
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts/FeeSplitter.sol#L99C76-L99C76
+
+```solidity
+if (balanceOf(token, account) > 0) userTokens[account].push(token);
+```
+
+This line does not check whether the `token` already exists in the `userTokens[account]` array before pushing it. As a result, if the `onBalanceChange()` function is called multiple times for the same `token` and `account` pair, which is common in a token economy with frequent transactions, the `userTokens[account]` array for that account will accumulate duplicates of the `token` address.
+
+The consequences of this issue are:
+
+1. **Increased Gas Costs**: Every time a token is redundantly added, it costs gas. Over time, with multiple redundant additions, this can become unnecessarily expensive.
+
+2. **Inefficient Storage**: The Ethereum blockchain is not an ideal place for storing large amounts of redundant data due to the high cost of storage.
+
+3. **Slower Processing**: When iterating through the `userTokens[account]` array, having a large number of duplicates can slow down processing times for functions that use this array, such as when calculating claimable fees or performing batch operations.
+
+4. **Complication of Logic**: Having duplicates can complicate the logic of other functions that depend on the `userTokens[account]` array, potentially leading to errors or unintended behavior.
+
+A solution to this issue is to check whether the `token` is already in the `userTokens[account]` array before adding it. This can be done by either using a mapping to keep track of which tokens are already associated with an account or by iterating through the array to check for the presence of the `token` before adding it.
+
+Here's a potential fix using a mapping to ensure uniqueness:
+
+```solidity
+mapping(address => mapping(address => bool)) private hasToken;
+
+function onBalanceChange(address token, address account) public onlyManager {
+    TokenData storage data = tokensData[token];
+    data.userFeeOffset[account] = data.cumulativeFeePerToken;
+    if (balanceOf(token, account) > 0 && !hasToken[account][token]) {
+        userTokens[account].push(token);
+        hasToken[account][token] = true;
+    }
+}
+```
+
+By adding the `hasToken` mapping, the contract can quickly check if a `token` is already associated with an `account` and avoid adding duplicates to the `userTokens[account]` array. This approach maintains the integrity of the array and ensures efficient use of resources.
