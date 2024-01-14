@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ahmedaghadi",
+  "risk": "3",
+  "title": "Only using \"==\" to check the condition doesn't assert it, as \"require\" is to be used",
+  "issueId": 693,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/693"
+}
