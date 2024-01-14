@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "pep7siup",
+  "risk": "3",
+  "title": "Curves::_buyCurvesToken and sellCurvesToken lacks updateFeeCredit call before the balance changes, cause loss of accrued fees",
+  "issueId": 559,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/559"
+}
