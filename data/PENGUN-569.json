@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "PENGUN",
+  "risk": "3",
+  "title": "[Detailed impact explanation] OnlyOwner and onlyManager can be called by anyone.",
+  "issueId": 569,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/569"
+}
