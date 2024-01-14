@@ -77,3 +77,39 @@ The `_transferFees()` function includes external calls to transfer ETH, which ar
 ```
 
 According to the `Check-Effects-Interactions` pattern recommended by Solidity, state changes should be performed before any external interactions. This prevents other contracts from disrupting the expected flow of execution, which could lead to unintended outcomes, including loss of funds or corruption of the contract's state.
+
+## Restriction on Initial Share Purchase (Self-Buy)
+The issue with the `Curves` contract is that it has a design limitation or specific behavior that restricts the initial purchase (self-buy) by the token subject (the creator or owner of the token) to exactly one share. This is due to how the `getPrice()` function calculates the cost for a given amount of tokens based on the current supply.
+
+Here is the critical part of the `getPrice()` function that leads to this behavior:
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L180C1-L187C6
+
+```solidity
+        uint256 sum2 = supply == 0 && amount == 1
+            ? 0
+            : ((supply - 1 + amount) * (supply + amount) * (2 * (supply - 1 + amount) + 1)) / 6;
+```
+
+If the `supply` is zero and `amount` is anything other than one, the expression `(supply - 1 + amount)` would result in an underflow because `supply - 1` is negative when `supply` is zero. Solidity underflowing will revert the transaction, preventing the purchase of more than one token when the supply is zero.
+
+Moreover, the `setWhitelist()` function adds an additional constraint:
+
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L394C1-L396C53
+
+```solidity
+        if (supply > 1) revert CurveAlreadyExists();
+```
+
+This code indicates that once the supply exceeds one, the whitelist can no longer be updated, implying that the initial buy must be exactly one unit of the token.
+
+The difference between the behavior of the `Curves` contract and the `Friend.tech` could lead to confusion among users. Users familiar with `Friend.tech` might expect the ability to self-buy any initial amount, and if not well documented, this discrepancy in `Curves` could result in a poor user experience.
+
+To address this issue and improve user experience:
+
+1. **Clarify in Documentation**: It should be clearly documented that the initial purchase by the token subject is limited to exactly one unit to avoid confusion.
+
+2. **Validate Input**: Implement checks in functions that call `getPrice()` to ensure that if the supply is zero, the `amount` is one, and provide a clear revert message if not.
+
+3. **Adjust Design**: If the intent is to allow subjects to buy more than one unit initially, the `getPrice()` function and other related logic should be adjusted to support this use case.
+
+By implementing these measures, the `Curves` contract can provide clarity and consistency to users, aligning with their expectations and preventing unexpected reverts due to underflows in the pricing calculation.
