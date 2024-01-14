@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "n1punp",
+  "risk": "2",
+  "title": "`buyCurvesToken` may update `ownedCurvesTokenSubjects` when `amount = 0` which it shouldn't.",
+  "issueId": 554,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/554"
+}
