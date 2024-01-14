@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "para8956",
+  "risk": "2",
+  "title": " A user can send more than price when calling `buyCurvesToken` because there is no value check and refund",
+  "issueId": 675,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/675"
+}
