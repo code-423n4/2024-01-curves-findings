@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Shubham",
+  "risk": "2",
+  "title": "No use of `buyCurvesTokenWithName()`  because users won't be able to buy tokens having a particular name & symbol",
+  "issueId": 625,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/625"
+}
