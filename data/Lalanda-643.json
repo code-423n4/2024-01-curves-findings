@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Lalanda",
+  "risk": "2",
+  "title": "Every time there is a buy and on some sell of tokens, the address is re-added to the userTokens array, as a duplicate",
+  "issueId": 643,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/643"
+}
