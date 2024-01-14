@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "The public accessibility of the buyCurvesToken can cause front-running",
+  "issueId": 563,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/563"
+}
