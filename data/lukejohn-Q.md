@@ -79,3 +79,20 @@ L241                  ? referralFeeDestination[curvesTokenSubject].call{value: r
 In summary, L241 might be failed by the referral contract. 
 
 QA5. For the Curves contract, there are several mappings that map from subjects to other components. They can be combined into one mapping that maps subjects to a struct. 
+
+```javascript
+struct InternalTokenMetadata{
+   ExternalTokenMeta externalTokenMeta;
+   PresalesMeta presalesMeta;
+   mapping(address => uint256) presalesBuys;
+   address referralFeeDestination, 
+   mapping(address => uint256) curvesTokenBalance;
+   uint256 curvesTokenSupply
+}
+```
+
+QA6. Curves._transferFees() fails to send the protocol fee to feesEconomics.protocolFeeDestination the sell case. The protocol fee will remain in the contract for this case. 
+
+[https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L218-L261](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L218-L261)
+
+Mitigation: calculate the protocol fee for both cases, and make sure the protocol fee is sent to feesEconomics.protocolFeeDestination for each case. 
