@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "Attacker can buy the corresponding token after Manager calling the addFees function and it will lead higher fees than expected when claimFees",
+  "issueId": 639,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/639"
+}
