@@ -75,3 +75,14 @@ function batchClaiming(address[] calldata tokenList) external {
 G4. _transfer() needs to check whether the target ``to`` has zero balance on the curvesToken, Only when it is zero there is a need to call _addOwnedCurvesTokenSubject(). Gas can be saved by adding this check. Also add a short circuit that if ``from == to`` then the function can return immediately. 
 
 [https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L317-L319](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L317-L319)
+
+G5. Curves.sellExternalCurvesToken(): the first line to check token zero address can be removed since it will be checked again inside function deposit(). 
+
+```javascript
+ function sellExternalCurvesToken(address curvesTokenSubject, uint256 amount) public {
+        if (externalCurvesTokens[curvesTokenSubject].token == address(0)) revert TokenAbsentForCurvesTokenSubject();
+
+        deposit(curvesTokenSubject, amount);
+        sellCurvesToken(curvesTokenSubject, amount / 1 ether);
+    }
+```
