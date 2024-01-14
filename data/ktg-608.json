@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ktg",
+  "risk": "2",
+  "title": "User can front run withdraw before token subject.",
+  "issueId": 608,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/608"
+}
