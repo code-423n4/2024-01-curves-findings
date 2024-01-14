@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ke1caM",
+  "risk": "2",
+  "title": "Attacker can prevent user from transfering token by artificially increasing the length of array inside `ownedCurvesTokenSubjects` mapping.",
+  "issueId": 691,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/691"
+}
