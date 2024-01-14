@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "piyushshukla",
+  "risk": "2",
+  "title": "Transfer from `address(this)` will not work for most of the tokens",
+  "issueId": 586,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/586"
+}
