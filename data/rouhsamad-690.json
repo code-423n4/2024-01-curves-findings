@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "rouhsamad",
+  "risk": "3",
+  "title": "Lack of dust ETH refund in Curves::buyCurvesToken results in locked ETH in contract",
+  "issueId": 690,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/690"
+}
