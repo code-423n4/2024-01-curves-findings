@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "sl1",
+  "risk": "2",
+  "title": "referralFees can be lost without a way to rescue them.",
+  "issueId": 628,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/628"
+}
