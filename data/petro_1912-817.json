@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "petro_1912",
+  "risk": "3",
+  "title": "A potential attack could be made against the FeeSplitter Contract and the attacker would drain all the funds there.",
+  "issueId": 817,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/817"
+}
