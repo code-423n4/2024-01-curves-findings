@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ether_sky",
+  "risk": "3",
+  "title": "A malicious user has the capability to obstruct the creation of new external Curves tokens.",
+  "issueId": 953,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/953"
+}
