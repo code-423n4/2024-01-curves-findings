@@ -1,4 +1,4 @@
-## 1. `Curves.sol/getPrice()` will fail if the user tries to buy more than one token in one txn when supply is zero or sell more than one token to making the supply to be zero
+## 1. `Curves.sol/getPrice()` will fail if the user tries to buy more than one token in one txn when supply is zero e.g.(supply = 0, amount = 2)
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L180-L187 
 This will make the seller or buyer to make more than one txn during those conditions.
 Consider having this implementation(breaking the getPrice function into two functions)
