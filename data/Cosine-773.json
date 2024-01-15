@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Cosine",
+  "risk": "3",
+  "title": "Deploying a token with the default symbol + current counter with the `buyCurvesTokenWithName` function leads to a permanent DoS of the most important Curves feature",
+  "issueId": 773,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/773"
+}
