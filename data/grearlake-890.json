@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "grearlake",
+  "risk": "2",
+  "title": "If `feeRedistributor` is not set, eth will be stuck at the contract",
+  "issueId": 890,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/890"
+}
