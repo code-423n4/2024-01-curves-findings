@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xprinc",
+  "risk": "3",
+  "title": "Attacker able to drain all the funds from FeeSplitter.sol with just the a single token.",
+  "issueId": 894,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/894"
+}
