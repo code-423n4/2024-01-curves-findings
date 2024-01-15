@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Cosine",
+  "risk": "3",
+  "title": "Holder fees are stolen as the acquired fees are not updated correctly when the amount of tokens hold by the user changes",
+  "issueId": 768,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/768"
+}
