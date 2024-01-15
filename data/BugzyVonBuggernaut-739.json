@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BugzyVonBuggernaut",
+  "risk": "2",
+  "title": "Anyone can DOS Curves::_deployERC20 for tokens where \"symbol\" is not set.",
+  "issueId": 739,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/739"
+}
