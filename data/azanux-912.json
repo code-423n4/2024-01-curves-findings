@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "azanux",
+  "risk": "3",
+  "title": "The 'setCurves' function of the 'FeeSplitter' contract is not restricted. ",
+  "issueId": 912,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/912"
+}
