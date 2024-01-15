@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xNaN",
+  "risk": "3",
+  "title": "Incorrect access control can lead to malicious depletion of all funds in the FeeSplitter.sol contract.",
+  "issueId": 723,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/723"
+}
