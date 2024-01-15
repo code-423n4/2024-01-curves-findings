@@ -6,7 +6,7 @@ New items are `pushed` into the following arrays but there is no option to `pop`
 E.g. there’s no maximum limit and there’s no functionality to remove array values.
 If the array grows too large, calling relevant functions might run out of gas and revert. Calling these functions could result in a `DOS` condition.
 
-### Instances:
+### Instance:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L335
 
 # [02] Missing or Incomplete NatSpec
@@ -26,7 +26,7 @@ Consider adding in full `NatSpec` comments for all functions to have complete co
 ### Description:
 The contract uses `custom errors` defined in the `CurvesErrors interface`, but it doesn't handle all possible errors. For instance, it doesn't handle potential errors during token transfers in the `_transfer()` function.
 
-### Instances:
+### Instance:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L313-L325
 
 ### Recommendation:
@@ -49,7 +49,7 @@ It's generally a good idea to validate inputs before performing operations on th
 ### Description:
 Several function calls within the contract do not check their return values. For instance, the `_transfer(), buyCurvesTokenWithName(),_addOwnedCurvesTokenSubject(), _deployERC20(),& buyCurvesTokenForPresale()` functions do not check whether the operations were successful or not. 
 
-### Instances:
+### Instance:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L313-L392
 
 ### Recommendation:
