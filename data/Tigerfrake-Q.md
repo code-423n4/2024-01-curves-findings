@@ -67,3 +67,13 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FFeeSplitter.s
 
 ### Recommendation:
 > It's generally recommended to lock the compiler version to avoid these issues.
+
+# [07] For same condition checks, use modifiers
+
+### Description:
+The main advantage of using modifiers for the same condition checks in different functions is code reusability and readability. 
+Instead of repeating the same condition check in every function that requires it, you can define a modifier once and then apply it to any function that needs it. This makes your code cleaner and easier to maintain.
+
+### Instances:
+- https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L297
+- https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L303
