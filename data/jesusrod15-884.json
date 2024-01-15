@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jesusrod15",
+  "risk": "3",
+  "title": "An adversary can launch a denial-of-service (DoS) attack against another user.",
+  "issueId": 884,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/884"
+}
