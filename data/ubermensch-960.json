@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ubermensch",
+  "risk": "3",
+  "title": "Loss of Accumulated Holder Fees in All Buys/Sells Due to `onBalanceChange` Call in `_transferFees`",
+  "issueId": 960,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/960"
+}
