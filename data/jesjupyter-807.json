@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jesjupyter",
+  "risk": "3",
+  "title": "First buyer can not buyCurvesToken with amount greater than 1 due to underflow in getPrice",
+  "issueId": 807,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/807"
+}
