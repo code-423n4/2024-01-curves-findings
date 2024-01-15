@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "hals",
+  "risk": "2",
+  "title": "The WhitListedSubject creator can change the subject's `merkleRoot`",
+  "issueId": 721,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/721"
+}
