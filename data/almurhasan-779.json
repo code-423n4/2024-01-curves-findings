@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "almurhasan",
+  "risk": "3",
+  "title": "Users may not claim fees from the FeeSplitter contract which is unfair.",
+  "issueId": 779,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/779"
+}
