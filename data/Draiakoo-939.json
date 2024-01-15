@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Draiakoo",
+  "risk": "3",
+  "title": "Malicious user can get holder's fees without having his funds registered in `Curves` contract",
+  "issueId": 939,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/939"
+}
