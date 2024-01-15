@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "opposingmonkey",
+  "risk": "3",
+  "title": "Curve owners can prevent people from trading/selling their shares by setting the 'referralFeeDestination' to a contract address that always or selectively reverts ",
+  "issueId": 936,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/936"
+}
