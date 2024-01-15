@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xc0ffEE",
+  "risk": "2",
+  "title": "Misconfigured fees could be set by malicious manager to change fees flow",
+  "issueId": 857,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/857"
+}
