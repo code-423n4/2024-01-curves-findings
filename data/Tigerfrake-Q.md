@@ -54,3 +54,16 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L3
 
 ### Recommendation:
 > It would be better to add checks after these function calls to handle possible failures.
+
+# [06] Floating pragma
+
+### Description:
+The disadvantage of using a floating pragma is that it can lead to inconsistencies and potential bugs. When a contract is compiled with a different compiler version, it might produce different bytecode due to changes in the compiler, even if the source code looks the same. This can lead to unexpected behavior if the contract is deployed on a network with a different compiler version than the one it was tested with.
+
+Moreover, if the contract uses features that were introduced in a newer compiler version, and it gets compiled with an older compiler version, it could fail or behave differently than expected.
+
+### Instance:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FFeeSplitter.sol#L2
+
+### Recommendation:
+> It's generally recommended to lock the compiler version to avoid these issues.
