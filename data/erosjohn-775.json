@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "Buying or selling CurveTokens before claimFees will result in loss of previously unclaimed fees",
+  "issueId": 775,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/775"
+}
