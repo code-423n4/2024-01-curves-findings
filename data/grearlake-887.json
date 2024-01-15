@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "grearlake",
+  "risk": "2",
+  "title": "`protocolFee` is stuck on the contract when selling token",
+  "issueId": 887,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/887"
+}
