@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "codegpt",
+  "risk": "2",
+  "title": "Imprecise allocation of fees prior to the token sale within the `FeeSplitter` contract.",
+  "issueId": 830,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/830"
+}
