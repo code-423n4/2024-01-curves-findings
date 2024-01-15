@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "DarkTower",
+  "risk": "2",
+  "title": "`Curves.sol` attacker can accumulate fees across migration transfers",
+  "issueId": 883,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/883"
+}
