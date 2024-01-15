@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "Lack of  slippage check and excessive amount return mechanism will lead to user's loss of funds",
+  "issueId": 760,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/760"
+}
