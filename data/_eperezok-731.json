@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "_eperezok",
+  "risk": "2",
+  "title": "`Curves::_buyCurvesToken` does not refund user funds sent in excess",
+  "issueId": 731,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/731"
+}
