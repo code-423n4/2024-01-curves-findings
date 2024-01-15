@@ -8,3 +8,5 @@ Implement an early return in the getFees function that checks if the price is ze
 if (price == 0) {
     return (0, 0, 0, 0, 0);
 }
+
+Code: https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L166-L178
