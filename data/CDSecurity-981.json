@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "CDSecurity",
+  "risk": "2",
+  "title": "Looping over an unbounded array can run out of gas",
+  "issueId": 981,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/981"
+}
