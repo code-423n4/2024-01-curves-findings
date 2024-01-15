@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Mj0ln1r",
+  "risk": "3",
+  "title": "No Access Control on `setCurves()` : Anyone can set Curves contract in FeeSplitter",
+  "issueId": 880,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/880"
+}
