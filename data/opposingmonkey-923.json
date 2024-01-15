@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "opposingmonkey",
+  "risk": "2",
+  "title": "setMaxFeePercent() may be used by the manager to set fees above 100%",
+  "issueId": 923,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/923"
+}
