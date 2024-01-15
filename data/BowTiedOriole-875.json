@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "BowTiedOriole",
+  "risk": "2",
+  "title": "If `referralFeeDestination == address(0)`, referralFee will be locked in the contract during a sell",
+  "issueId": 875,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/875"
+}
