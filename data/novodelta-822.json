@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "novodelta",
+  "risk": "2",
+  "title": "curvesTokenSubject can set referral fee destination to address that does not accept ether and therefore block all selling and buying of this specific subject token",
+  "issueId": 822,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/822"
+}
