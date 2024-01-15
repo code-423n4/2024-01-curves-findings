@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xprinc",
+  "risk": "2",
+  "title": "User can be attacked to not able to utilize Curves/transferAllCurvesTokens(address to) because of the excessive gas required for the call",
+  "issueId": 802,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/802"
+}
