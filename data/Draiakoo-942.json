@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Draiakoo",
+  "risk": "2",
+  "title": "`FeeSplitter::userTokens` is not properly implemented and can lead to provide wrong information to the user or even a DoS",
+  "issueId": 942,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/942"
+}
