@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Berring",
+  "risk": "2",
+  "title": "Forgot to add modifier to the setCurve",
+  "issueId": 866,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/866"
+}
