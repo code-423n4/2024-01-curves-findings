@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kong",
+  "risk": "3",
+  "title": "Lack of access control when setting curves address in FeeSplitter contract",
+  "issueId": 818,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/818"
+}
