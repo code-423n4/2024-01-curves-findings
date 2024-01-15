@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Cosine",
+  "risk": "2",
+  "title": "The price calculation logic can lead quite easily to transferring excess ether which is not handled and therefore stuck inside the contract",
+  "issueId": 771,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/771"
+}
