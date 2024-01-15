@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kong",
+  "risk": "2",
+  "title": "Potential risk of being unable to add the curvesTokenSubject to the ownedCurvesTokenSubjects list when performing buyCurvesToken for the first time",
+  "issueId": 812,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/812"
+}
