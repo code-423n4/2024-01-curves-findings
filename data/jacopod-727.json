@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jacopod",
+  "risk": "3",
+  "title": "Missing Access Control in FeeSplitter::setCurves()",
+  "issueId": 727,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/727"
+}
