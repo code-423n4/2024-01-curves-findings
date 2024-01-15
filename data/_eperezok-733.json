@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "_eperezok",
+  "risk": "2",
+  "title": "`FeeSplitter` will become insolvent if `holdersFeePercent` is changed from non-zero to zero",
+  "issueId": 733,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/733"
+}
