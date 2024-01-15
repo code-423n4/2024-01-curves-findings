@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Protocol fee is not transferred to protocolFeeDestination when selling curve token shares",
+  "issueId": 952,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/952"
+}
