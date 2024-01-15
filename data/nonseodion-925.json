@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nonseodion",
+  "risk": "2",
+  "title": "Users cannot sell their tokens when the token subject or referral destination refuses ETH transfers",
+  "issueId": 925,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/925"
+}
