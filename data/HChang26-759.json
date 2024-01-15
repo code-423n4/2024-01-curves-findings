@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "HChang26",
+  "risk": "2",
+  "title": "Failure to Return Excess ETH in `buyCurvesToken()` Leads to Permanent Lockup",
+  "issueId": 759,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/759"
+}
