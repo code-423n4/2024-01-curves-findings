@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "zhaojie",
+  "risk": "2",
+  "title": "`holderFees` is reset when the user buys/sells CurvesToken.",
+  "issueId": 752,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/752"
+}
