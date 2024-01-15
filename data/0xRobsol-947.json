@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xRobsol",
+  "risk": "3",
+  "title": "Issue: Potential Over-claiming Due to Duplicate Tokens in getUserTokensAndClaimable",
+  "issueId": 947,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/947"
+}
