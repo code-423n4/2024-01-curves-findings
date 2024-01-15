@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "PoeAudits",
+  "risk": "2",
+  "title": "No Access Control for setCurves in feeSplitter.sol",
+  "issueId": 720,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/720"
+}
