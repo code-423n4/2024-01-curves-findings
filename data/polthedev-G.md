@@ -20,3 +20,9 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L274
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L225
 
 To optimize the function and reduce gas costs, consider modifying the _buyCurvesToken function to fetch the fee details once and pass them as arguments to the _transferFees function. This change would eliminate the need for a second call to getFees within _transferFees, thereby reducing the overall gas cost of the operation.
+
+===
+
+3) Mark math operations as unchecked
+
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L321-L322
