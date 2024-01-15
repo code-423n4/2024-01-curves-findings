@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xSmartContract",
+  "risk": "2",
+  "title": "`setCurves()`  function can be frontrun for DOS",
+  "issueId": 909,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/909"
+}
