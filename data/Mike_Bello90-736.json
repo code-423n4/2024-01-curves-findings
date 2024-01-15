@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Mike_Bello90",
+  "risk": "3",
+  "title": "ETH is Being Lock in The Contract FeeSplitter Due to a Rounding Error in Fees Calculation and There is no Way to Retrieve the ETH Locked.",
+  "issueId": 736,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/736"
+}
