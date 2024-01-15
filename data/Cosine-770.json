@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Cosine",
+  "risk": "2",
+  "title": "Wrong handling of the `userTokens` array manipulates the `claimableFees` value from the `getUserTokensAndClaimable` function",
+  "issueId": 770,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/770"
+}
