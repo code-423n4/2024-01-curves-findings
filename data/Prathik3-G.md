@@ -56,6 +56,7 @@ Make the changes [here](https://github.com/code-423n4/2024-01-curves/blob/516aed
 
 `Curves::getPrice()` function is used internally in many other functions such as `getBuyPrice`,`getSellPrice` etc but is marked as public . Making this function as internal would reduce gas consumption.
 
+> NOTE: The bot report finds the instances where public function can be made external because they are not being used inside the contract. But this issue states that the function `Curves::getPrice()` is used internally in many other functions and thus should be marked as an internal function to save some gas.
 
 ## [G-03] - Validate the values directly instead of storing them in a variable and the validating that variable.
 
