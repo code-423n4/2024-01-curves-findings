@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "_eperezok",
+  "risk": "2",
+  "title": "TokenSubject can arbitrarily pause/unpause buying and selling their token",
+  "issueId": 730,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/730"
+}
