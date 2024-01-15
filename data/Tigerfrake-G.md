@@ -74,3 +74,14 @@ By reordering as shown below, we can avoid making the state read.
             feesEconomics.maxFeePercent ) revert InvalidFeeDefinition();
 ```
 
+# [G-4] For Loop Optimization
+
+### Description: 
+The for-loop can be optimised in 4 ways:
+• Removing initialization of loop counter if value is 0 by default.
+• Caching array length outside the loop.
+• Prefix increment (++i) instead of postfix increment (i++).
+• Unchecked increment.
+
+### Instances:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L330-L333
