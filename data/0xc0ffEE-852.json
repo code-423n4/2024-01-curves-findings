@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xc0ffEE",
+  "risk": "2",
+  "title": "DoS from transferring/receiving curve tokens and withdraw/deposit CurvesERC20 tokens",
+  "issueId": 852,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/852"
+}
