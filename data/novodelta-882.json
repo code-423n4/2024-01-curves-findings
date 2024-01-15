@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "novodelta",
+  "risk": "3",
+  "title": "Missing access control on `FeeSplitter.setCurves` enables anyone to set new, modfied Curves contract and steal all ETH from fees in `FeeSplitter`",
+  "issueId": 882,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/882"
+}
