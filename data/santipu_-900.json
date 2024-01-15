@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "santipu_",
+  "risk": "3",
+  "title": "Loss of referralFee when protocolFee is not set",
+  "issueId": 900,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/900"
+}
