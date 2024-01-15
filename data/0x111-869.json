@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0x111",
+  "risk": "2",
+  "title": "transferOwnership() is done in one step",
+  "issueId": 869,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/869"
+}
