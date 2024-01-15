@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "_eperezok",
+  "risk": "3",
+  "title": "`FeeSplitter` can be drained due to missing access control in `setCurves`",
+  "issueId": 729,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/729"
+}
