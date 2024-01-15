@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "LeoGold",
+  "risk": "2",
+  "title": "All fees or part of the fees can get stucked in curve.sol",
+  "issueId": 944,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/944"
+}
