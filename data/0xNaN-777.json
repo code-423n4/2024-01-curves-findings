@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xNaN",
+  "risk": "3",
+  "title": " The _transfer function does not invoke the onBalanceChange function of the feeRedistributor to promptly update the token holdings, allowing the attacker to deplete all funds in the feeRedistributor with only a small amount of fees.",
+  "issueId": 777,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/777"
+}
