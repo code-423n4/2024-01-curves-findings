@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xprinc",
+  "risk": "2",
+  "title": "The _curvesTokenCounter variable can be rendered permanently unusable, preventing all users from deploying an ERC20 contract if they have provided Default Symbol",
+  "issueId": 815,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/815"
+}
