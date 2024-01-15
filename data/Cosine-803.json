@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Cosine",
+  "risk": "3",
+  "title": "The `cumulativeFeePerToken` calculation does not adjust on the supply change",
+  "issueId": 803,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/803"
+}
