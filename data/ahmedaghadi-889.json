@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ahmedaghadi",
+  "risk": "3",
+  "title": "FeeSplitter::setCurves function doesn't have any access control modifier",
+  "issueId": 889,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/889"
+}
