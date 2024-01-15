@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "zhaojie",
+  "risk": "3",
+  "title": "token owner or referral can use re-entrant to steal holder fees.",
+  "issueId": 746,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/746"
+}
