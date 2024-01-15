@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "lsaudit",
+  "risk": "2",
+  "title": "Ability to mint tokens with already existing names and symbols",
+  "issueId": 969,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/969"
+}
