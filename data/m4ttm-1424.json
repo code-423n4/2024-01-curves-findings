@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "m4ttm",
+  "risk": "2",
+  "title": "Deploying a token with a malicious name and symbol can prevent future deployments using the default name and symbol",
+  "issueId": 1424,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1424"
+}
