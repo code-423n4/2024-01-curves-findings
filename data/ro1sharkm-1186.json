@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ro1sharkm",
+  "risk": "3",
+  "title": "Loss of Fees in _transferFees Function",
+  "issueId": 1186,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1186"
+}
