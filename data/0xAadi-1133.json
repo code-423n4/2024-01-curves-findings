@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xAadi",
+  "risk": "3",
+  "title": "Double-counting of `owed` fees when users claim their accumulated fees in the `FeeSplitter` contract, may drain the contract's balance",
+  "issueId": 1133,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1133"
+}
