@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jangle",
+  "risk": "3",
+  "title": "The FeeSplitter can be drain due to the double claiming issue",
+  "issueId": 1204,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1204"
+}
