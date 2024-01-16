@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "cheatc0d3",
+  "risk": "3",
+  "title": "No mechanism to remove a token from userTokens list when balance is zero",
+  "issueId": 1388,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1388"
+}
