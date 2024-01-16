@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "burhan_khaja",
+  "risk": "3",
+  "title": "Missing Access Controls on setCurves() allows any one to change curves state variable, drain whole ETH balance by inflating balanceOf() and totalSupply() and shatter intended feesplitter functionality",
+  "issueId": 1149,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1149"
+}
