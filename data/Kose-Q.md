@@ -77,3 +77,28 @@ Since "buyCurvesTokenWithName()" and "buyCurvesTokenForPreSale()" functions are 
         _mint(curvesTokenSubject, name, symbol);
     }
 ```
+
+## L - 3: Send Excess Ethers Back
+buyCurvesToken() function and its derivatives are payable and receives ether in order to buy tokens. But in the internal function which complete the buy process, excess funds are not sent back and they are stuck in contract forever:
+```solidity
+    function _buyCurvesToken(address curvesTokenSubject, uint256 amount) internal {
+        uint256 supply = curvesTokenSupply[curvesTokenSubject];
+        if (!(supply > 0 || curvesTokenSubject == msg.sender)) revert UnauthorizedCurvesTokenSubject();
+
+        uint256 price = getPrice(supply, amount);
+        (, , , , uint256 totalFee) = getFees(price);
+
+        if (msg.value < price + totalFee) revert InsufficientPayment();
+
+        curvesTokenBalance[curvesTokenSubject][msg.sender] += amount;
+        curvesTokenSupply[curvesTokenSubject] = supply + amount;
+        _transferFees(curvesTokenSubject, true, price, amount, supply);
+
+        // If is the first token bought, add to the list of owned tokens
+        if (curvesTokenBalance[curvesTokenSubject][msg.sender] - amount == 0) {
+            _addOwnedCurvesTokenSubject(msg.sender, curvesTokenSubject);
+        }
+    }
+```
+### Recommendation 
+If (msg.value > price + totalFee), add excess funds to the newly created mapping userExcessEther, and create a function for user to withdraw this excess ether. It is best to make this a two step process, otherwise low level call's can create further problems.
