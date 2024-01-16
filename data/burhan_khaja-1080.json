@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "burhan_khaja",
+  "risk": "3",
+  "title": "curvesTokenSubject can't purchase more than one token during the presale phase due to flawed calculations in getPrice()",
+  "issueId": 1080,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1080"
+}
