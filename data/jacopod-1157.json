@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jacopod",
+  "risk": "3",
+  "title": "Malicious tokenSubject can DOS all holders and impede them to sell the tokens by setting a malicious referralFeeDestination that does not accept ether",
+  "issueId": 1157,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1157"
+}
