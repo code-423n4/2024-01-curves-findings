@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "McToady",
+  "risk": "3",
+  "title": "Missing Access Control on FeeSplitter::setCurves meaning anyone can change the curves address linked to the Fee Splitter contract.",
+  "issueId": 1275,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1275"
+}
