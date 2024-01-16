@@ -1,6 +1,6 @@
 # 1. The `ownedCurvesTokenSubjects` map size only increases and never decreases which leads to a growing gas cost when calling the `_addOwnedCurvesTokenSubject` and `transferAllCurvesTokens` functions.
 
-https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L328C1-L336C6
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L328-L336
 
 In the `Curves` contract, the `ownedCurvesTokenSubjects` variable is used to record the types of Curves tokens held by each user. When transferring in or buying tokens, new tokens are added by calling the `_addOwnedCurvesTokenSubject` function.
 
@@ -22,6 +22,8 @@ It is recommended to implement logic to decrease the `ownedCurvesTokenSubjects` 
 
 
 # 2. It is unnecessary to use the `getClaimableFees` function when calling the `claimFees` or `batchClaiming` functions
+
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/FeeSplitter.sol#L63-L78
 
 In the `FeeSplitter` contract, when users call `claimFees` or `batchClaiming`, the following code is used to determine the amount of holder fees to be claimed:
 
