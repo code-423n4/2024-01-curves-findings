@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "m4ttm",
+  "risk": "2",
+  "title": "https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L240-L244",
+  "issueId": 1489,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1489"
+}
