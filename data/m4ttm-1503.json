@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "m4ttm",
+  "risk": "2",
+  "title": "onBalanceChange adds tokens to userTokens without checking if they already exist",
+  "issueId": 1503,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1503"
+}
