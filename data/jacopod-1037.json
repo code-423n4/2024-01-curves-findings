@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "jacopod",
+  "risk": "2",
+  "title": "Lack of input validation on Curves::setMaxFeePercent() can make  getSellPriceAfterFee() revert if fees are wrongly configured, with max above 1 ether",
+  "issueId": 1037,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1037"
+}
