@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Aymen0909",
+  "risk": "3",
+  "title": "Attacker can claim all fees from `FeeSplitter` by transferring Curves balance to multiple accounts",
+  "issueId": 1236,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1236"
+}
