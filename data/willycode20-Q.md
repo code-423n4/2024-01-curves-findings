@@ -1,0 +1,1 @@
+The updateFeeCredit() in FeeSpillter.sol file is declared internal but without an "_". This can cause issue of naming convention
