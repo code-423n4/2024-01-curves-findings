@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xmuxyz",
+  "risk": "2",
+  "title": "`call()` should be used to transfer the native asset instead of `transfer()`",
+  "issueId": 1175,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1175"
+}
