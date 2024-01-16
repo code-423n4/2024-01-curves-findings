@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "42TechLabs",
+  "risk": "2",
+  "title": "Failed transfer may be overlooked due to lack of contract existence check",
+  "issueId": 1061,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1061"
+}
