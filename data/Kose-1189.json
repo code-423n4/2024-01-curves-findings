@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kose",
+  "risk": "3",
+  "title": "Malicious Subject Can Prevent Sell Calls and Profit Because of Unprotected call",
+  "issueId": 1189,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1189"
+}
