@@ -38,6 +38,17 @@ Events are useful for UI changes and user notifications. The code base overall c
 ```
 Here it is better to check if the valid proof is provided or not, in early stage of execution itself.
 
+```
+    function getClaimableFees(address token, address account) public view returns (uint256) {
+        TokenData storage data = tokensData[token];
+        uint256 balance = balanceOf(token, account);
++       if (balance == 0) return 0;
+        uint256 owed = (data.cumulativeFeePerToken - data.userFeeOffset[account]) * balance;
+        return (owed / PRECISION) + data.unclaimedFees[account];
+    }
+```
+If the balance is 0 return 0.
+
 ### 4. Skip execution flow for particular inputs in transfer_ function.
 ```
     function _transfer(address curvesTokenSubject, address from, address to, uint256 amount) internal {
