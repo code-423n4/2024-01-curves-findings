@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "m4ttm",
+  "risk": "2",
+  "title": "If a user only specifies one of token name or symbol, both are set to the default value",
+  "issueId": 1513,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1513"
+}
