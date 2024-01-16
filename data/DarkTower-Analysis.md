@@ -13,7 +13,7 @@ Analysis Report :-
 
 
 ## 1. Overview
-Cruves is a protocol that aims to further decentralize Socialfi. It empowers users to got more involved in the protocol with it's new innovative features such as a fee distribution amongst holders of a subject - also known as "shares" from Friendtech. Curves takes inspiration from Friendtech's implementation of SocialFi while also building upon the core code of Friendtech. The referral & token holder fee feature is especially unique to SocialFi as this incentivises holding of shares rather than regular market speculation of them as well as recognizing referrals as an integral part of adoption thereby incentivizing such users. It's smart contracts goes beyond simply buying and selling tokens also known as "subjects". It explores an alternative usage method for such tokens by allowing them to be exported outside of the protocol in the form of ERC20s that can be used anywhere. This further makes curve tokens interoperable giving it a more usage path for users. Curve tokens are however only owned in single whole units. But nonetheless, these tokens can be seamlessly transferred out of the protocol and back in.
+Curves is a protocol that aims to further decentralize Socialfi. It empowers users to get more involved in the protocol with it's new innovative features such as a fee distribution amongst holders of a subject - also known as "shares" from Friendtech. Curves takes inspiration from Friendtech's implementation of SocialFi while also building upon the core code of Friendtech. The referral & token holder fee feature is especially unique to SocialFi as this incentivises holding of shares rather than regular market speculation of them as well as recognizing referrals as an integral part of adoption thereby incentivizing such users. It's smart contracts goes beyond simply buying and selling tokens also known as "subjects". It explores an alternative usage method for such tokens by allowing them to be exported outside of the protocol in the form of ERC20s that can be used anywhere. This further makes curve tokens interoperable giving it a more usage path for users. Curve tokens are however only owned in single whole units. But nonetheless, these tokens can be seamlessly transferred out of the protocol and back in.
 
 
 ## 2.  Architecture view(Diagram)
@@ -37,7 +37,7 @@ The main contracts are :-
 4.FeeSplitter.sol
 5.Security.sol
 
-**1.Curves.sol**
+### **1.Curves.sol**
 This is the core contract of the protocol. It's houses the entry & exit points for users in the system. With 432 lines of code, it does a ton more than you would expect compared to Friendtech. As a subject, this is the contract you go to in order to begin trading activity for your token, as a user, this is also the same contract you interact with to purchase a subject token or shares. Think about it as a powerhouse where you and your friend (subject) do business. We will explore some crucial functions and variables that exist in this contract.
 
 State variables are :-
@@ -110,14 +110,14 @@ Handles the logic for migrating users back into the protocol in the case they tr
 Similar function to the `deposit()` but slightly different as it allows the migration of a curve token subject outside of the protocol at which point it mints the ERC20 equivalent to the caller.
 
 
-**2. CurvesERC20.sol**
+### **2. CurvesERC20.sol**
 This smart contract houses the ERC20 token contract for the curve token. This is a regular ERC20 implementation and uses Openzeppelin's implementation. It also uses the Ownable library to transfer ownership to the `CurvesERC20Factory.sol` contract which handles deployments of this `CurvesERC20` contract and protects sensitive functions such as `mint` && `burn` enforcing only the owner can perform these crucial actions.
 
-**3. CurvesERC20Factory.sol**
+### **3. CurvesERC20Factory.sol**
 Simple contract that handles the deployments of the CurvesERC20 token. This contract is also the owner of any deployed CurvesERC20.
 
 
-**4. FeeSplitter.sol**
+### **4. FeeSplitter.sol**
 This contract inherits the `Security` contract which houses roles and access controls. It has some variables and functions that are crucial to the Curves contract. It is the fee allocation contract that users can interact with to claim fees, the curves contract interacts with to log and send fees delegated to holders.
 
 Some variables are the `curves` variable that stores the curves contract and the `PRECISION` variable set to 1 ether or 1e18.
@@ -147,7 +147,7 @@ This function exposes an endpoint/method for the curves contract to transfer hol
 `batchClaiming()`
 Similar logic for `claimFees()` but allows bundling the action across multiple subjects in one transaction. Really handy function that tries to mitigate heavy gas costs.
 
-**5.Security.sol**
+### **5.Security.sol**
 This contract plays a vital role in the curves protocol by declaring and implementing the access controls required to interact such as the `owner` & `managers` state variables.
 
 It has two crucial modifiers such as `onlyOwner` and `onlyManager`. These functions have criticial issues that will be fixed as a result of this audit in the sense that both are useless because of a slight implementation error which flaws them of their use case. For example, only a whitelisted manager address should be able interact with `onlyManager` protected methods. And the `onlyOwner` modifier enforces that only the owner can indeed transfer ownership as well as set a manager address.
@@ -192,35 +192,27 @@ This innovative platform will serve as a socialfi platform for people of all kin
 
 After the completion of this audit we have some thoughts and recommendations for the Curves protocol team to implement.
 
-1. Pricing model.
-The price of curve subject tokens increases incredibly fast. The first token is always free for the subject token owner then the price rapidly increases afterwards starting from 0.0000625 for the lucky second buy. To facilitate 200 tokens buys of the curve subject the cost will be 200 * 200 / 16000 * 1e18 = 2.5 ether - that's a crazy amount for only just the 200th token. The 1000th token will cost 62.5 ether. With this model, only a few tokens will be sold meaning few people can afford to hold these tokens.
- The pricing model can be seen below which facilitates this:
+### 1. Pricing model.
 
-```solidity
-function getPrice(uint256 supply, uint256 amount) public pure returns (uint256) {
-    uint256 sum1 = supply == 0 ? 0 : ((supply - 1) * (supply) * (2 * (supply - 1) + 1)) / 6;
-    uint256 sum2 = supply == 0 && amount == 1
-        ? 0
-        : ((supply - 1 + amount) * (supply + amount) * (2 * (supply - 1 + amount) + 1)) / 6;
-    uint256 summation = sum2 - sum1;
-    return (summation * 1 ether) / 16000;
-}
-```
+The price model is quadratic in nature. The cost for each additional token is based on the square of the current supply i.e $\frac{n^{2} * 1e 18}{16000}$ where $\ n$ is the supply.
 
-Then this does the calculation taking account of the curve token supply for the specific subject:
-```solidity
-function getBuyPrice(address curvesTokenSubject, uint256 amount) public view returns (uint256) {
-        return getPrice(curvesTokenSupply[curvesTokenSubject], amount);
-    }
-```
+![Price evolution Curve](https://maroutis.github.io/images/EvolutionOfTokenSubjectPrice.png)
 
+As shown by the price curve, the price of the subject tokens starts off slowly then increases incredibly fast without ever slowing down. The first token is always free for the subject token owner then the price rapidly increases afterwards starting from 0.0000625 for the lucky second buy. To facilitate 200 tokens buys of the curve subject the cost will be 200 * 200 / 16000 * 1e18 = 2.5 ether - that's a crazy amount for only just the 201th token. The 1001th token will cost 62.5 ether. 
+
+With this model, the liquidity will be concentrated at the start of the price curve. Only a few tokens will be sold meaning few people can afford to hold these tokens. As the objective is to have many users holding their tokens in the protocol, having only few people holding/trading the token subjects kind of defeats this purpose. 
 We understand this is by design but the pricing will be expensive to entice a ton of users to keep the supply of a token steadily increasing.
 
-2. The FeeSplitter contract is vulnerable:
-  The FeeSplitter contract has some issues that will deter users from using the protocol. One thing is users would want to have an easier time using the protocol but having to fees each time is not good. If they don't to make a claim before the offset is reset for them, they lose the associated fees. Users want to feel safe that they can come back in 2 months and be able to claim accumulated fees not needing to spend gas here and there on claiming fees every single time some trading activity happens on the platform. Gas for this will easily deter users from doing such actions. Our recommendation is to save the user fee accrued before resetting the offset so a user can hold a subject token, forget it, come back in 30 days and be able to claim accumulated fees without losing a substantial amount.
+You can consider the following polynomial model where the cost of each additional token is: $\frac{n^{3/2} * 1e 18}{16000}$ where $\ n$ is the supply.
+The key characteristic of this model is that the rate of price increase is between linear and quadratic. It increases faster than a linear model but slower than a quadratic model (where the price increases by the square of the supply). This allows for moderate early growth and controlled acceleration when supply increases. For example, the 1001th token will only cost 2 ether when using this model.
+
+### 2. The FeeSplitter contract is vulnerable:
+
+  The FeeSplitter contract has some issues that will deter users from using the protocol. One thing is users would want to have an easier time using the protocol but having to fees each time is not good. If they don't to make a claim before the offset is reset for them, they lose the associated fees. Users want to feel safe that they can come back in 2 months and be able to claim accumulated fees not needing to spend gas here and there on claiming fees every single time some trading activity happens on the platform. Gas for this will easily deter users from doing such actions. Our recommendation is to save the user fee accrued before resetting the offset so a user can hold a subject token, forget it, come back in 30 days and be able to claim accumulated fees without losing a substantial amount. Also to make the token distribution more fair, the developers might want to consider adding a timestamp that describes how much time a specific number of tokens were held in the contract for each user. 
 
 
-3. There is a ridiculous amount of external calls that happen after every token trade on the platform specifically in the `_transferFees()` function. Any failure of a single external call reverts the whole transaction. This is no good as such failure could continue for a long time even leading to a DOS of trading for a subject token. We recommend caching/saving fees and implementing a pull technique for all fee receivers rather than a push technique that the protocol currently utilizes.
+### 3. External calls
+There is a high amount of external calls that happen after every token trade on the platform specifically in the `_transferFees()` function. Any failure of a single external call reverts the whole transaction. This is no good as such failure could continue for a long time even leading to a DOS of trading for a subject token. We recommend caching/saving fees and implementing a pull technique for all fee receivers rather than a push technique that the protocol currently utilizes.
 
 
 ## 7. Hours spent
@@ -237,6 +229,8 @@ Highlights of this report
 
 ### Time spent:
 48 hours
+
+
 
 ### Time spent:
 48 hours
