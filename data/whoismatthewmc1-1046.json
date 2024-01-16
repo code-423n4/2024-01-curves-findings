@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "whoismatthewmc1",
+  "risk": "3",
+  "title": "No access control on FeeSplitter.setCurves can cause many issues with holderFee calculation and claiming",
+  "issueId": 1046,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1046"
+}
