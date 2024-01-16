@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "emrekocak",
+  "risk": "2",
+  "title": "If a user calls `buyCurvesToken` with a high `msg.value` the remaining value will be lost",
+  "issueId": 1330,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1330"
+}
