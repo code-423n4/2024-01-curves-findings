@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ahmedaghadi",
+  "risk": "3",
+  "title": "Not transferring \"protocolFee\" in case of \"sellCurvesToken\"",
+  "issueId": 1500,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1500"
+}
