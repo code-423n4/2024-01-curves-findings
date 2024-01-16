@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ktg",
+  "risk": "3",
+  "title": "ProtocolFee is stuck in Curves and lost forever when users sell their tokens.",
+  "issueId": 996,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/996"
+}
