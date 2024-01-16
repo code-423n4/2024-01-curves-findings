@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "karanctf",
+  "risk": "3",
+  "title": "Anyone can set `curves` address in FeeSpliter.sol",
+  "issueId": 1420,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1420"
+}
