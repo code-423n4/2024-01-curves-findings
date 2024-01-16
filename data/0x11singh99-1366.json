@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0x11singh99",
+  "risk": "2",
+  "title": "`ProtocolFee` will be stuck in `Curves.sol` when `Curves::_transferFees` called at the time of selling tokens.",
+  "issueId": 1366,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1366"
+}
