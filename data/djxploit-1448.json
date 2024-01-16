@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "djxploit",
+  "risk": "3",
+  "title": "`setCurves` function has no access control, which allows an attacker to manipulate balance of a token, and claim unlimited fees",
+  "issueId": 1448,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1448"
+}
