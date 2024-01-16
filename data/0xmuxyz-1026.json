@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xmuxyz",
+  "risk": "2",
+  "title": "Lack of validation to check whether or not the given `curvesTokenSubject` would correspond to the caller (`msg.sender`) in the Curves#`buyCurvesTokenWithName()`",
+  "issueId": 1026,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1026"
+}
