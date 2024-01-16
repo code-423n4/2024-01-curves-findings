@@ -48,7 +48,7 @@
 **Fee distribution**: A portion of the transaction cost is resevered as fees for the protocol, the curve owner or subject, the referral fee and the holder's fee. These fees are distributed to the required addresses upon transaction completion, and the holder's fee is sent to the `FeeSplitter` contract, from which they can be claimed.
 
 <p align="center">
-    <img width= auto src="https://private-user-images.githubusercontent.com/112232336/296076912-a7130297-a325-4147-9ecf-29bbef691909.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUwMTU2MjksIm5iZiI6MTcwNTAxNTMyOSwicGF0aCI6Ii8xMTIyMzIzMzYvMjk2MDc2OTEyLWE3MTMwMjk3LWEzMjUtNDE0Ny05ZWNmLTI5YmJlZjY5MTkwOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDExMVQyMzIyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMjQxZGQ2Mjk0MGM1MmU4OWJmMWNlMWFlODE3YWI3YmExZDlmZDk4ZTg2YzBmZGU0MzlhOTYzNzQwNzk5ODc1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9._uhD-mBYdqaT2qdpITXAaZgcW_bnPjYbd5lEP4IcqdU" alt="Curves"> sLOC - 413
+    <img width= auto src="https://github-production-user-asset-6210df.s3.amazonaws.com/112232336/296076912-a7130297-a325-4147-9ecf-29bbef691909.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240116T172913Z&X-Amz-Expires=300&X-Amz-Signature=cc134006656ce51404c4428bd34eafd792a35bfb5e8ef4f88bc941b03a08e944&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=0" alt="Curves"> sLOC - 413
 </p>
 
 #### **[FeeSplitter.sol:](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/FeeSplitter.sol)**
@@ -60,7 +60,7 @@
 **Fee claiming**: By calling the `claimFees` and the `batchClaiming` functions, loyal `Curve` holders can claim their portion of the holder's fee which they're entitled to. 
 
 <p align="center">
-    <img width= auto src="https://private-user-images.githubusercontent.com/112232336/296076755-6b5b607b-2db9-4803-8522-0c93b41a5ed9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUwMTU2MjksIm5iZiI6MTcwNTAxNTMyOSwicGF0aCI6Ii8xMTIyMzIzMzYvMjk2MDc2NzU1LTZiNWI2MDdiLTJkYjktNDgwMy04NTIyLTBjOTNiNDFhNWVkOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDExMVQyMzIyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMTNjNmUwOTU3MGE0YzFkYmMyMjZmZjk3NzJmNjIzMjRlODljNzI3MjQ1NDA3YjI3OGJjYTA2YjllOWFmZTZmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.JLJykKgghFKOK1GVUKgWkrXv0o71W8MRIFX3A95G7Yc" alt="Feesplitter">
+    <img width= auto src="https://github-production-user-asset-6210df.s3.amazonaws.com/112232336/296076755-6b5b607b-2db9-4803-8522-0c93b41a5ed9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240116T172730Z&X-Amz-Expires=300&X-Amz-Signature=0d2461ebce431c962a480a4ba7d356a21ecac66623d96dcbf7966b58caa3bf41&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=0" alt="Feesplitter">
 sLOC - 95
 </p>
 
@@ -70,7 +70,7 @@ sLOC - 95
 - The contract plays a crucial role in maintaining the integrity of the protocol and acts as a blueprint for a secure system, covering the core functions.
 
 <p align="center">
-    <img width= auto src="https://private-user-images.githubusercontent.com/112232336/296076998-a6c55fda-aca4-459e-b403-076dd75c4e5e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUwMTU2MjksIm5iZiI6MTcwNTAxNTMyOSwicGF0aCI6Ii8xMTIyMzIzMzYvMjk2MDc2OTk4LWE2YzU1ZmRhLWFjYTQtNDU5ZS1iNDAzLTA3NmRkNzVjNGU1ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDExMVQyMzIyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNTBlYjE0NGQzMjk1Y2NiNGE4ZWQzMDcyOWQ5MjkyYmU1YmJhODAzZmNjYjcyMzg1MDgzYjQ5ZGYyYzdlZjFmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.zTuBQ77nTm89NOsiXZsRcWqeZwYCnR0b23MS7EbUYQo" alt="Security"> sLOC - 23
+    <img width= auto src="https://github-production-user-asset-6210df.s3.amazonaws.com/112232336/296076998-a6c55fda-aca4-459e-b403-076dd75c4e5e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240116T172955Z&X-Amz-Expires=300&X-Amz-Signature=f6ae922a207b6aac14355ddca42c9ba2d170f3afc0ac275c1bb295729dd013dd&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=0" alt="Security"> sLOC - 23
 </p>
 
 
@@ -78,7 +78,7 @@ sLOC - 95
 - CurvesERC20Factory.sol centralizes ERC20 token creation logic to optimize efficiency and scalability within the protocol.
 **Deployment**: The ERC20 tokens are deployed using the create opcode which computes the token address as a function of the sender’s own address and a nonce.
 <p align="center">
-    <img width= auto src="https://private-user-images.githubusercontent.com/112232336/296077426-bb7410e1-88e1-459e-8e40-df776b2edb30.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUwMTU2MjksIm5iZiI6MTcwNTAxNTMyOSwicGF0aCI6Ii8xMTIyMzIzMzYvMjk2MDc3NDI2LWJiNzQxMGUxLTg4ZTEtNDU5ZS04ZTQwLWRmNzc2YjJlZGIzMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDExMVQyMzIyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jOTY2NWFkMjcwZTQ2MjQwNjJkYTU4NWQ0YmQzMzhlMDBmYjM4ZDYwMTBlZGQ0YjNiMjAwN2Y3MzBhNDhmYjUzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.yaoc28PYBGMQd56hsTsgvu0YY-NwvlkkegNuybjhuMU" alt="CurvesERC20Factory"> sLOC - 8
+    <img width= auto src="https://github-production-user-asset-6210df.s3.amazonaws.com/112232336/296077426-bb7410e1-88e1-459e-8e40-df776b2edb30.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240116T173059Z&X-Amz-Expires=300&X-Amz-Signature=28f0adabc69c5ce9fefa95256f328ee6d6d1706f0dabcc8bfce5496ea9739020&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=0" alt="CurvesERC20Factory"> sLOC - 8
 </p>
 
 
@@ -87,7 +87,7 @@ sLOC - 95
 - CurvesERC20.sol acts as a blueprint for creating compatible ERC20 tokens when Curve tokens are exported out of the protocol.
 **Minting and burning**: The tokens can only be minted/burned by users upon calling the `withdraw`/`deposit` functions in the `Curves` contract respectively. It is therefore like a swap between the internal protocol Curve and the external Curve ERC20 at a ratio of 1 to 1.  
 <p align="center">
-    <img width= auto src="https://private-user-images.githubusercontent.com/112232336/296077340-4a9f7554-f2eb-4ca2-85a3-fe2eb7114331.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUwMTU2MjksIm5iZiI6MTcwNTAxNTMyOSwicGF0aCI6Ii8xMTIyMzIzMzYvMjk2MDc3MzQwLTRhOWY3NTU0LWYyZWItNGNhMi04NWEzLWZlMmViNzExNDMzMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDExMVQyMzIyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMjdjOGM3YTI1Y2M0ZjlkOTI2ZDNhN2ZmZTg5YjdiYjcxMTE3NjkwNTA3MWFkMGQ3YTVlYTAxYWM5YmM1OGUxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.DHyd-PpaLA1UmdawHzgp1mkhpG7kIlZg25IY-0Lgt3Y" alt="CurvesERC20">sLOC - 14
+    <img width= auto src="https://github-production-user-asset-6210df.s3.amazonaws.com/112232336/296077340-4a9f7554-f2eb-4ca2-85a3-fe2eb7114331.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240116T173021Z&X-Amz-Expires=300&X-Amz-Signature=94d94f06ade0e6b348765172dceef8c711f436e9bf5ca18568dcb45ea0f7e74c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=0" alt="CurvesERC20">sLOC - 14
 </p>
 
 
@@ -157,6 +157,8 @@ In general, the codebase is compact, of small size and well-designed which is co
 - [FriendTech 1](https://medium.com/valixconsulting/friend-tech-smart-contract-breakdown-c5588ae3a1cf)
 - [FriendTech 2](https://ada-d.medium.com/understanding-friend-tech-through-smart-contracts-edac5d98cd49)
 - [Forms Network Chain](https://docs.form.network/)
+
+
 
 ### Time spent:
 18 hours
