@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "d3e4",
+  "risk": "2",
+  "title": "`userTokens[]` pushed beyond the limit.",
+  "issueId": 1467,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1467"
+}
