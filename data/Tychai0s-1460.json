@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tychai0s",
+  "risk": "3",
+  "title": "Potential Loss of Fees Due to Token Transfer Prior to Claim in `FeeSplitter.sol`",
+  "issueId": 1460,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1460"
+}
