@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "TermoHash",
+  "risk": "2",
+  "title": "Users lose fees when buying tokens multiple times and lost fees are stuck on FeeSplitter contract",
+  "issueId": 1101,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1101"
+}
