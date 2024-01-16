@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "spaghetticode_sentinel",
+  "risk": "3",
+  "title": "buyCurvesToken may cause funds to be locked",
+  "issueId": 1216,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1216"
+}
