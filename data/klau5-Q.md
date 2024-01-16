@@ -408,3 +408,88 @@ Manual Review
 ## Recommended Mitigation Steps
 
 Use the EnumerableSet data type instead of an array. [https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.3/contracts/utils/structs/EnumerableSet.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.3/contracts/utils/structs/EnumerableSet.sol)
+
+# Cannot start presale/sale if subject buys 0 tokens
+
+## Links to affected code
+
+[https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L265](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L265)
+
+## Impact
+
+User cannot purchase during the Presale period.
+
+## Proof of Concept
+
+It does not check if the `amount`  is more than 0 when purchasing tokens. Therefore, if subject set the amount to 0 when calling `buyCurvesTokenForPresale` and do not purchase the first token, subject cannot sell tokens during the presale period. Also, the subject cannot sell after the presale period.
+
+```solidity
+function _buyCurvesToken(address curvesTokenSubject, uint256 amount) internal {
+    uint256 supply = curvesTokenSupply[curvesTokenSubject];
+@>  if (!(supply > 0 || curvesTokenSubject == msg.sender)) revert UnauthorizedCurvesTokenSubject();
+
+    uint256 price = getPrice(supply, amount);
+    (, , , , uint256 totalFee) = getFees(price);
+
+    if (msg.value < price + totalFee) revert InsufficientPayment();
+
+    curvesTokenBalance[curvesTokenSubject][msg.sender] += amount;
+    curvesTokenSupply[curvesTokenSubject] = supply + amount;
+    _transferFees(curvesTokenSubject, true, price, amount, supply);
+
+    // If is the first token bought, add to the list of owned tokens
+    if (curvesTokenBalance[curvesTokenSubject][msg.sender] - amount == 0) {
+        _addOwnedCurvesTokenSubject(msg.sender, curvesTokenSubject);
+    }
+}
+
+function buyCurvesTokenWhitelisted(
+    address curvesTokenSubject,
+    uint256 amount,
+    bytes32[] memory proof
+) public payable {
+    if (
+        presalesMeta[curvesTokenSubject].startTime == 0 ||
+        presalesMeta[curvesTokenSubject].startTime <= block.timestamp
+    ) revert PresaleUnavailable();
+
+    presalesBuys[curvesTokenSubject][msg.sender] += amount;
+    uint256 tokenBought = presalesBuys[curvesTokenSubject][msg.sender];
+    if (tokenBought > presalesMeta[curvesTokenSubject].maxBuy) revert ExceededMaxBuyAmount();
+
+    verifyMerkle(curvesTokenSubject, msg.sender, proof);
+@>  _buyCurvesToken(curvesTokenSubject, amount);
+}
+```
+
+## Tools Used
+
+Manual Review
+
+## Recommended Mitigation Steps
+
+Enforce the amount to 1 or check if it is more than 1 when calling `buyCurvesTokenForPresale` or `buyCurvesTokenWithName` .
+
+Or, check if the amount is > 0 in `_buyCurvesToken`.
+
+```diff
+function _buyCurvesToken(address curvesTokenSubject, uint256 amount) internal {
++   require(amount > 0, "wrong amount");
+    uint256 supply = curvesTokenSupply[curvesTokenSubject];
+    if (!(supply > 0 || curvesTokenSubject == msg.sender)) revert UnauthorizedCurvesTokenSubject();
+
+    uint256 price = getPrice(supply, amount);
+    (, , , , uint256 totalFee) = getFees(price);
+
+    if (msg.value < price + totalFee) revert InsufficientPayment();
+
+    curvesTokenBalance[curvesTokenSubject][msg.sender] += amount;
+    curvesTokenSupply[curvesTokenSubject] = supply + amount;
+    _transferFees(curvesTokenSubject, true, price, amount, supply);
+
+    // If is the first token bought, add to the list of owned tokens
+    if (curvesTokenBalance[curvesTokenSubject][msg.sender] - amount == 0) {
+        _addOwnedCurvesTokenSubject(msg.sender, curvesTokenSubject);
+    }
+}
+```
