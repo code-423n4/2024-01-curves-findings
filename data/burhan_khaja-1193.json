@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "burhan_khaja",
+  "risk": "2",
+  "title": "Non-curvesTokenSubject can deploy any one's ERC20 token with default name and default symbol which can't ever be changed later, all without their consent",
+  "issueId": 1193,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1193"
+}
