@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "anshujalan",
+  "risk": "2",
+  "title": "Unbounded array in Curves._addOwnedCurvesTokenSubject can be exploited to cause a major DoS",
+  "issueId": 1197,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1197"
+}
