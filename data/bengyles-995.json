@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "bengyles",
+  "risk": "2",
+  "title": "Transaction reverts with underflow when owner wants to initalize token buy with more than 1 token",
+  "issueId": 995,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/995"
+}
