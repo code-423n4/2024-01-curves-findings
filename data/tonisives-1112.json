@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "tonisives",
+  "risk": "3",
+  "title": "Protocol fees are not accounted for and mixed with user funds",
+  "issueId": 1112,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1112"
+}
