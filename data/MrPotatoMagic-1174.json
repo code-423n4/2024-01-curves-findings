@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Incorrect denominator is used in getFees() function calculation",
+  "issueId": 1174,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1174"
+}
