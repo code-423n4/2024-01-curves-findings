@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xNaN",
+  "risk": "2",
+  "title": "All fee receivers can reentry the FeeSplitter contract during the buycurvestokens period to collect unexpected fees.",
+  "issueId": 1211,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1211"
+}
