@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "TermoHash",
+  "risk": "2",
+  "title": "FeeSplitter setCurves lack of access control can be exploited to steal funds",
+  "issueId": 1086,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1086"
+}
