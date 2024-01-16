@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Bube",
+  "risk": "2",
+  "title": "Inconsistent initial token purchase logic in `Curves::buyCurvesTokenWithName` function",
+  "issueId": 1359,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1359"
+}
