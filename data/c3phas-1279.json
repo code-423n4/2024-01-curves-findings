@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "c3phas",
+  "risk": "2",
+  "title": "When tokens are sold, we should remove them from the list of owned tokens",
+  "issueId": 1279,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1279"
+}
