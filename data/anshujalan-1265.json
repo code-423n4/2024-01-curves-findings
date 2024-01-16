@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "anshujalan",
+  "risk": "2",
+  "title": "Missing checks in Curves.withdraw allows a user to block a token subject from choosing their own name and symbol",
+  "issueId": 1265,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1265"
+}
