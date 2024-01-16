@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Dobry",
+  "risk": "3",
+  "title": "`buyCurvesTokenWithName` and `buyCurvesTokenForPresale` always revert, which makes the protocol's main functionality not working.",
+  "issueId": 1244,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1244"
+}
