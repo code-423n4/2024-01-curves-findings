@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Gosho",
+  "risk": "3",
+  "title": "Anyone can change the 'curves' state variable, therefore claim fees they are not supposed to",
+  "issueId": 1317,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1317"
+}
