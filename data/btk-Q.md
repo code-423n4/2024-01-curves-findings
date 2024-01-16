@@ -4,10 +4,15 @@ The Curves protocol, an extension of friend.tech, enhances functionality with fe
 
 ## Findings Summary
 
-| Risk   | Title                                          |
-| ------ | -----------------------------------------------|
-| [L-01] | Buying will be paused for 1 second             |
-| [L-02] | Unbounded loop in _addOwnedCurvesTokenSubject  |
+| Risk   | Title                                                         |
+| ------ | --------------------------------------------------------------|
+| [L-01] | Buying will be paused for 1 second                            |
+| [L-02] | Unbounded loop in _addOwnedCurvesTokenSubject                 |
+| [L-03] | UserTokens will be stuffed with duplicated tokens             |
+| [L-04] | GetPrice will overflow if supply reached 70296448064902889503 |
+
+> [!TIP]
+> Foundry setup to run the tests: https://gist.github.com/0xbtk/2de3816f370bfff5f3c31a51a4d4e425
 
 ## [L-01] Buying will be paused for 1 second 
 
@@ -104,16 +109,6 @@ Consider updating the check in `buyCurvesToken()` to:
 if (startTime != 0 && startTime > block.timestamp) revert SaleNotOpen();
 ```
 
-## [L-**] {Title}
-
-## Impact
-
-## Description
-
-Detailed description of this finding.
-
-## Recommended Mitigation Steps
-
 ## [L-02] Unbounded loop in _addOwnedCurvesTokenSubject
 
 ## Impact
@@ -139,3 +134,84 @@ There are no bounds on the number of tokens subjects that can pushed to ownedCur
 ## Recommended Mitigation Steps
 
 Consider defining and documenting a safe maximum value for the upper bound on every loop, to guarantee the correct functionality of the contracts.
+
+## [L-03] UserTokens will be stuffed with duplicated tokens
+
+## Impact
+
+UserTokens array will be stuffed with duplicated tokens.
+
+## Description
+
+When users purchase tokens in the curves contract, the FeeSplitter.onBalanceChange function is triggered to update the user state. However, the current implementation results in duplicated tokens being added to the UserTokens array:
+
+```solidity
+    function onBalanceChange(address token, address account) public onlyManager {
+        TokenData storage data = tokensData[token];
+        data.userFeeOffset[account] = data.cumulativeFeePerToken;
+        if (balanceOf(token, account) > 0) userTokens[account].push(token);
+    }
+```
+
+Tokens are unconditionally added to the userTokens array, even if they already exist, leading to redundancy and may cause some integrations problems in the future.
+
+#### Here is a coded PoC to demonstrate the issue:
+
+```solidity
+    function testDuplicateUserTokens() public {
+        vm.prank(alice);
+        curves.buyCurvesTokenWithName({
+            curvesTokenSubject: alice,
+            amount: 1,
+            name: "Ether",
+            symbol: "ETH"
+        });
+
+        buyFor(bob, 1, alice);
+        buyFor(bob, 1, alice);
+        buyFor(bob, 1, alice);
+
+        FeeSplitter.UserClaimData[] memory bobData = feeRedistributor.getUserTokensAndClaimable(bob);
+
+        console.log("Bob tokens length:", bobData.length);
+    }
+```
+
+#### Logs:
+
+```yaml
+Bob tokens length: 3
+```
+
+## Recommended Mitigation Steps
+
+Modify the code to check if the token is already in userTokens before adding it. Refer to [_addOwnedCurvesTokenSubject](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L328-L335) for an example.
+
+## [L-04] GetPrice will overflow if supply reached 70296448064902889503
+
+## Impact
+
+The GetPrice function will overflow if the total supply reaches 70296448064902889503.
+
+## Description
+
+```solidity
+    function testGetPriceFuzz(uint256 amount) public {
+        vm.prank(bob);
+        curves.buyCurvesTokenWithName({
+            curvesTokenSubject: bob,
+            amount: 1,
+            name: "Bitcoin",
+            symbol: "BTC"
+        });
+
+        amount = bound(amount, 1, 70296448064902889503);
+        require(amount >= 1 && amount <= 70296448064902889503);
+        
+        curves.getBuyPrice(bob, amount); // Arithmetic over/underflow
+    }
+```
+
+## Recommended Mitigation Steps
+
+Ensure thorough documentation emphasizing that the total supply can not exceed 70296448064902889503.
