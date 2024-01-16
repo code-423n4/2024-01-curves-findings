@@ -21,3 +21,35 @@ https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d
 ```
 
 above we can see that sellCurvesToken() doesn't do any update to the `ownedCurvesTokenSubjects` mapping. User can sell all its `curvesTokenSubject` tokens and will still have its `ownedCurvesTokenSubjects` mapping value showing ownership of that `curvesTokenSubject` token.
+
+
+# [L-02] - startTime != 0 check not necessary 
+the `startTime != 0` check is not necessary because the check `startTime >= block.timestamp` is present. block.timestamp will never be 0 and startTime is checked to be greater than or eq to block.timestamp. a zero value `startTime` is not possible because `startTime` is checked to be greater than `block.timestamp` in [buyCurvesTokenForPresale()](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L384) when user is creating the presale. Remove the check to reduce computation. 
+```
+    function buyCurvesToken(address curvesTokenSubject, uint256 amount) public payable {
+        uint256 startTime = presalesMeta[curvesTokenSubject].startTime;
+        if (startTime != 0 && startTime >= block.timestamp) revert SaleNotOpen();   
+
+        _buyCurvesToken(curvesTokenSubject, amount);
+    }
+```
+
+# [L-03] dont need to cast an address to an address again  
+
+in `_deployERC20()` the address returned by curve factory is already of type address, no need to cast the variable `tokenContract` to type address again in a return statement 
+
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L352C1-L361C39
+```
+        address tokenContract = CurvesERC20Factory(curvesERC20Factory).deploy(name, symbol, address(this));
+
+
+        externalCurvesTokens[curvesTokenSubject].token = tokenContract;
+        externalCurvesTokens[curvesTokenSubject].name = name;
+        externalCurvesTokens[curvesTokenSubject].symbol = symbol;
+        externalCurvesToSubject[tokenContract] = curvesTokenSubject;
+        symbolToSubject[symbol] = curvesTokenSubject;
+
+
+        emit TokenDeployed(curvesTokenSubject, tokenContract, name, symbol);
+        return address(tokenContract);
+```
