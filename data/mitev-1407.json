@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "mitev",
+  "risk": "3",
+  "title": "Curves::_transfer can transfer tokens to address(0)",
+  "issueId": 1407,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1407"
+}
