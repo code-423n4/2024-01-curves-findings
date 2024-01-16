@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Nikki",
+  "risk": "2",
+  "title": "FeeSplitter.userTokens array items duplication on Curves._transferFees function call",
+  "issueId": 1306,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1306"
+}
