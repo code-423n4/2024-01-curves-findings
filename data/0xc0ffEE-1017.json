@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xc0ffEE",
+  "risk": "2",
+  "title": "Trades could be front-run by mev bot to profit, causing traders to suffer slippage",
+  "issueId": 1017,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1017"
+}
