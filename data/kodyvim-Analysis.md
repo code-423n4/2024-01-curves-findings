@@ -29,7 +29,7 @@ Implement mechanisms for emergency  in case of unexpected situations. This could
 |--- | --- |
 |Access Controls | **Moderate**. Although access controls were in place for performing privileged operations they were not functional.|
 |Arithmetic | **Moderate**. The contracts uses solidity version ^0.8.0 potentially safe from overflow/underflow |
-| Centralization | **Moderate**. Most critical functionalities could be changed by Security Council and DAO.|
+| Centralization | **Moderate**. Most critical functionalities could be changed by owners and Managers.|
 | Code Complexity | **Satisfactory**. Most part of the protocol were easy to understand |
 |Contract Upgradeability | **Satisfactory**. Contracts are not upgradable.|
 | Documentation | **Moderate**. High-level documentation and some in-line comments describing the functionality of the protocol were available.|
@@ -85,6 +85,8 @@ While leveraging the Form Network for scalability is a positive aspect, changes 
 * Perform a detailed examination of the presale feature and Fees distribution.
 
 * Proceed with quality assurance (QA) and report writing.
+
+
 
 ### Time spent:
 72 hours
