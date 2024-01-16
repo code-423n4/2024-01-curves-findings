@@ -8,7 +8,7 @@
 |d) |Security Approach of the Project | Audit approach of the Project |
 |e) |Other Audit Reports and Automated Findings | What are the previous Audit reports and their analysis |
 |f) |Packages and Dependencies Analysis | Details about the project Packages |
-|g) |New insights and learning from this audit | Things learned from the project |
+|g) |New insights and learning of project from this audit | Things learned from the project |
 
 
 ## a) The approach I would follow when reviewing the code
@@ -82,6 +82,64 @@ It contains all the functions that the contract FeeSplitter.sol have
 
 ## Domain Model of the contract
 [![Screenshot-from-2024-01-16-21-44-42.png](https://i.postimg.cc/0QV9whWW/Screenshot-from-2024-01-16-21-44-42.png)](https://postimg.cc/MMjkk38V)
+
+
+## Contract Description Table of Curves.sol
+
+| Contract Type  | Function Name                 | Visibility     | Mutability | Modifiers          | Security         | Implementation       |
+| -------------- | ----------------------------- | --------------- | ---------- | ------------------ | ---------------- | --------------------- |
+| Public         | setFeeRedistributor           | External        | 🛑        | onlyOwner          |                  |                       |
+| External       | setMaxFeePercent              | External        | 🛑        | onlyManager        |                  |                       |
+| External       | setProtocolFeePercent         | External        | 🛑        | onlyOwner          |                  |                       |
+| External       | setExternalFeePercent         | External        | 🛑        | onlyManager        |                  |                       |
+| External       | setReferralFeeDestination     | Public          | 🛑        | onlyTokenSubject   |                  |                       |
+| External       | setERC20Factory               | External        | 🛑        | onlyOwner          |                  |                       |
+| Public         | getFees                       | Public          |            |                    |                  |                       |
+| Public         | getPrice                      | Public          |            |                    |                  |                       |
+| Public         | getBuyPrice                   | Public          |            |                    |                  |                       |
+| Public         | getSellPrice                  | Public          |            |                    |                  |                       |
+| Public         | getBuyPriceAfterFee           | Public          |            |                    |                  |                       |
+| Public         | getSellPriceAfterFee          | Public          |            |                    |                  |                       |
+| Public         | buyCurvesToken                | Public          | 💵        |                    |                  |                       |
+| Internal       | _transferFees                 | Internal        |            |                    |                  |                       |
+| Internal       | _buyCurvesToken               | Internal        |            |                    |                  |                       |
+| Public         | sellCurvesToken               | Public          |            |                    |                  |                       |
+| External       | transferCurvesToken           | External        |            |                    |                  |                       |
+| External       | transferAllCurvesTokens       | External        |            |                    |                  |                       |
+| Internal       | _transfer                     | Internal        |            |                    |                  |                       |
+| Internal       | _addOwnedCurvesTokenSubject   | Internal        |            |                    |                  |                       |
+| Internal       | _deployERC20                  | Internal        |            |                    |                  |                       |
+| Public         | buyCurvesTokenWithName         | Public          | 💵        |                    |                  |                       |
+| Public         | buyCurvesTokenForPresale       | Public          | 💵        | onlyTokenSubject   |                  |                       |
+| External       | setWhitelist                  | External        | 🛑        |                    |                  |                       |
+| Public         | buyCurvesTokenWhitelisted     | Public          | 💵        |                    |                  |                       |
+| Public         | verifyMerkle                  | Public          |            |                    |                  |                       |
+| External       | setNameAndSymbol              | External        | 🛑        | onlyTokenSubject   |                  |                       |
+| External       | mint                          | External        | 🛑        | onlyTokenSubject   |                  |                       |
+| Internal       | _mint                         | Internal        | 🛑        | onlyTokenSubject   |                  |                       |
+| Public         | withdraw                      | Public          | 🛑        |                    |                  |                       |
+| Public         | deposit                       | Public          | 🛑        |                    |                  |                       |
+| Public         | sellExternalCurvesToken       | Public          | 🛑        |                    |                  |                       |
+
+
+## Contract Description Table of FeeSplitter.sol
+
+
+| Function Name             | Visibility     | Mutability | Modifiers          |
+| ------------------------- | --------------- | ---------- | ------------------ |
+|                           |                 |            |                    |
+| setCurves                 | Public          | 🛑        |                    |
+| balanceOf                 | Public          | NO❗️     |                    |
+| totalSupply               | Public          | NO❗️     |                    |
+| getUserTokens             | Public          | NO❗️     |                    |
+| getUserTokensAndClaimable | Public          | NO❗️     |                    |
+| updateFeeCredit           | Public          | 🛑        |                    |
+| getClaimableFees          | Internal 🔒     | 🛑        |                    |
+| claimFees                 | Public          | NO❗️     |                    |
+| addFees                   | External ❗️     | 🛑        |                    |
+| onBalanceChange           | Public          | 💵        | onlyManager        |
+| batchClaiming             | Public          | 🛑        | onlyManager        |
+|                           | External ❗️     | 💵        |                    |
 
 
 ## c) Test analysis
@@ -168,6 +226,80 @@ Ref:https://xin-xia.github.io/publication/icse194.pdf
 
 
 
+## d) Security Approach of the Project
+
+### Successful current security understanding of the project;
+
+1- The project hasn't underwent any audits, this innovative assessments on Code4rena is the first, where multiple auditors are scrutinizing the code.
+
+### What the project should add in the understanding of Security;
+
+1- By distributing the project to testnets, ensuring that the audits are carried out in onchain audit. (This will increase coverage)
+
+
+2- Add On-Chain Monitoring System; If On-Chain Monitoring systems such as Forta are added to the project, its security will increase.
+
+For example ; This bot tracks any DEFI transactions in which wrapping, unwrapping, swapping, depositing, or withdrawals occur over a threshold amount. If transactions occur with unusually high token amounts, the bot sends out an alert. https://app.forta.network/bot/0x7f9afc392329ed5a473bcf304565adf9c2588ba4bc060f7d215519005b8303e3
+
+3- After the Code4rena audit is completed and the project is live, I recommend the audit process to continue, projects like immunefi do this. 
+https://immunefi.com/
+
+
+4- Emergency Action Plan
+In a high-level security approach, there should be a crisis handbook like the one below and the strategic members of the project should be trained on this subject and drills should be carried out. Naturally, this information and road plan will not be available to the public.
+https://docs.google.com/document/u/0/d/1DaAiuGFkMEMMiIuvqhePL5aDFGHJ9Ya6D04rdaldqC0/mobilebasic#h.27dmpkyp2k1z
+
+5- I also recommend that you have an "Economic Audit" for projects based on such complex mathematics and economic models. An example Economic Audit is provided in the link below;
+Economic Audit with [Three Sigma](https://panoptic.xyz/blog/panoptic-three-sigma-partnership)
+
+6 - As the project team, you can consider applying the multi-stage audit model.
+
+[![sla.png](https://i.postimg.cc/nhR0kN3w/sla.png)](https://postimg.cc/Sn96Q1FW)
+
+Read more about the MPA model;
+https://mpa.solodit.xyz/
+
+7 - I recommend having a masterplan applied to project team members (This information is not included in the documents).
+All authorizations, including NPM passwords and authorizations, should be reserved only for current employees. I also recommend that a definitive security constitution project be found for employees to protect these passwords with rules such as 2FA. The LEDGER hack, which has made a big impact recently, is the best example in this regard;
+
+https://twitter.com/Ledger/status/1735326240658100414?t=UAuzoir9uliXplerqP-Ing&s=19
+
+
+
+## e) Other Audit Reports and Automated Findings 
+
+**Automated Findings:**
+https://github.com/code-423n4/2024-01-curves/blob/main/bot-report.md
+
+**Previous Audits**
+There isn't any Previous Audit
+
+##  f) Packages and Dependencies Analysis 📦
+
+| Package | Version | Usage | 
+| --- | --- | --- | 
+| [`openzeppelin`](https://www.npmjs.com/package/@openzeppelin/contracts) | [![npm](https://img.shields.io/npm/v/@openzeppelin/contracts.svg)](https://www.npmjs.com/package/@openzeppelin/contracts) |  Project uses version `4.9.3`; consider updating to `5.0.1` 
+| [`solhint`](https://github.com/protofire/solhint) | [![npm](https://img.shields.io/npm/v/@openzeppelin/contracts.svg)](https://www.npmjs.com/package/@openzeppelin/contracts) |  Project relies on version `3.3.6`; consider upgrading to `4.1.1`
+
+## g) New insights and learning of project from this audit:
+
+1. **Smart Fee Handling**: The `FeeSplitter` contract is a clever bit of work. It's designed to take in fees from various tokens and then distribute these to the token holders. This setup is great for keeping people invested in your ecosystem, as they get a direct benefit from its success.
+
+2. **Tight Security Measures**: Your use of the `Security` contract for managing access is a smart move. In the world of decentralized systems, keeping unauthorized users out and protecting against vulnerabilities is key. This contract acts like a bouncer at a club, carefully checking who gets in.
+
+3. **Leveraging Trusted Standards**: By integrating OpenZeppelin contracts for things like ERC20 tokens, you're tapping into well-tested and secure code. It's like using building blocks that everyone trusts, ensuring that your project is both secure and compatible with a wide range of other applications and services.
+
+4. Factory for Tokens: You've employed a factory pattern in **CurvesERC20Factory** and **CurvesERC20** for creating ERC20 tokens. This model allows for the efficient generation of new ERC20 tokens with minimal effort, promoting a dynamic and flexible token ecosystem.
+
+In summary, the project showcases a deep understanding of smart contract development with a focus on security, modular construction, and user incentives. There's room to grow, especially in areas like detailed tokenomics and governance, but what you have is a solid foundation for a complex and secure decentralized system.
+
+
+Note: I didn't tracked the time, the time I mentioned is just an estimate
+
 
 ### Time spent:
-6 hours
+3 hours
+
+
+### Time spent:
+3 hours
