@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "imare",
+  "risk": "2",
+  "title": "FeeSplitter fees can be drained becouse there is missing authentication from changing the Curve contract address",
+  "issueId": 1266,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1266"
+}
