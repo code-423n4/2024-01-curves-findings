@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "FastChecker",
+  "risk": "3",
+  "title": "When selling `CurvesToken`, the protocolFee is not transmitted anywhere and these funds are permanently locked in the contract.",
+  "issueId": 1199,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1199"
+}
