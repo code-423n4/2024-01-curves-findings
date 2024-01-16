@@ -62,4 +62,34 @@ function setReferralFeeDestination(
     }
 ```
 
+## [L-2] Prevent gas-griefing with low level `call` when the returned bytes data is not needed.
 
+There are 3 instances of this
+- https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L232
+- https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L236
+- https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L241
+
+
+Using the `.call()` native function to send ether exposes the transaction to gas greifing attack with huge return data payload. 
+
+The returned data will have to be copied to memory which exposes the contract to gas griefing attack. Even if the returned `bytes data` is not assigned below, it is still returned and copied to memory.
+
+```
+File: Curves.sol
+236: (bool success2, ) = curvesTokenSubject.call{value: subjectFee}("");
+237:                if (!success2) revert CannotSendFunds();
+//@audit Even though the returned bytes data is not assigned above, it is still returned and copied to memory making it vulnerable to gas griefing.
+```
+
+Recommendation: 
+
+Short Term: Use low level assembly call to send ETH and only send ETher when `amount` is not zero in order to avoid sending zero ETH.
+
+```
+bool status;
+assembly {
+    status := call(gas(), receiver, amount, 0, 0, 0, 0)
+}
+```
+
+Long Term: Consider using this https://github.com/nomad-xyz/ExcessivelySafeCall
