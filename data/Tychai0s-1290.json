@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tychai0s",
+  "risk": "2",
+  "title": "Zero-Amount Purchase Issue in `buyCurvesToken` Function in `Curves.sol`",
+  "issueId": 1290,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1290"
+}
