@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Zach_166",
+  "risk": "3",
+  "title": "Attackers can set the Curves contract to a malicious contract and potentially draining all ETH from the FeeSplitter contract",
+  "issueId": 1168,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1168"
+}
