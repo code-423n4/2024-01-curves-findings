@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "rouhsamad",
+  "risk": "3",
+  "title": "Lack of access control in FeeSplitter:setCurves",
+  "issueId": 1118,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1118"
+}
