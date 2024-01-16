@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Nachoxt17",
+  "risk": "3",
+  "title": "No Access-Control in Critical Setter Function",
+  "issueId": 1438,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1438"
+}
