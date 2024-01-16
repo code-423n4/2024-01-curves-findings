@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "MrPotatoMagic",
+  "risk": "2",
+  "title": "Certain amount of CurvesERC20 tokens can never be reintegrated into Curves",
+  "issueId": 1334,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1334"
+}
