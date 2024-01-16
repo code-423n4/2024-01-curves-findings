@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "invaid input check in _buyCurvesToken",
+  "issueId": 1433,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1433"
+}
