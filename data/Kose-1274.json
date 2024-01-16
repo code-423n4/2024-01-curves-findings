@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kose",
+  "risk": "2",
+  "title": "Transferring curves token does not update sender's accumulated fee",
+  "issueId": 1274,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1274"
+}
