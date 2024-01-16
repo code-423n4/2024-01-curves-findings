@@ -49,3 +49,14 @@ https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d
         _mint(curvesTokenSubject, name, symbol);
     }
 ```
+## [G-2] Use bytes32 instead of string
+Use bytes32 instead of string to save gas whenever possible. String is a dynamic data structure and therefore is more gas consuming then bytes32.
+
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L44
+
+```diff
+- string public constant DEFAULT_NAME = "Curves";
++ bytes32 public constant DEFAULT_NAME = "Curves";
+- string public constant DEFAULT_SYMBOL = "CURVES";
++ bytes32 public constant DEFAULT_SYMBOL = "CURVES";
+```
