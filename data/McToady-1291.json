@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "McToady",
+  "risk": "3",
+  "title": "A users claimable fees (ETH) will be permanently locked in the contract if they don't claim their fees before selling a token",
+  "issueId": 1291,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1291"
+}
