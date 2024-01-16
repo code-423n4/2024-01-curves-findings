@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "FastChecker",
+  "risk": "2",
+  "title": "An attacker could prevent users from creating `externalCurvesToken`.",
+  "issueId": 1205,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1205"
+}
