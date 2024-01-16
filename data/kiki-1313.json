@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "kiki",
+  "risk": "2",
+  "title": "Lack of Authorization Check in onBalanceChange Function in FeeSplitter Contract",
+  "issueId": 1313,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1313"
+}
