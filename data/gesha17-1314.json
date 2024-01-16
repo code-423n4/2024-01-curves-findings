@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "gesha17",
+  "risk": "3",
+  "title": "Malicios user can DoS certain functions for a victim or increase their gas fees by increasing the size of the ownedCurvesTokenSubjects array for that user",
+  "issueId": 1314,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1314"
+}
