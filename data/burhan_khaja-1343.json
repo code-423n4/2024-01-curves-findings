@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "burhan_khaja",
+  "risk": "3",
+  "title": "DOS in Every function that calls _transferFees()  After holdersFeePercent is set due to flawed manager assumption about curves contract in feeSplitter contract",
+  "issueId": 1343,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1343"
+}
