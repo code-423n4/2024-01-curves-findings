@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Faith",
+  "risk": "2",
+  "title": "No max constraint on total fee percentage allows a manager to front-run large sales to steal funds from users",
+  "issueId": 1297,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1297"
+}
