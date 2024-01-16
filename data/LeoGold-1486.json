@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "LeoGold",
+  "risk": "3",
+  "title": "Wrong input arguement for `feesplitter::onBalanceChange()` and `feesplitter::addFees`  in `curve::_transferFee()` function",
+  "issueId": 1486,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1486"
+}
