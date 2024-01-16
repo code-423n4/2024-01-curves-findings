@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xJaeger",
+  "risk": "2",
+  "title": "ownedCurvesTokenSubjects subjects are not updated on transferAllCurvesTokens",
+  "issueId": 1233,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1233"
+}
