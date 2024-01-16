@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0x0bserver",
+  "risk": "3",
+  "title": "There is loss of funds as `FeeSplitter` contract is not accumulating  `Holderfees` ",
+  "issueId": 1414,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1414"
+}
