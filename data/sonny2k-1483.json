@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "sonny2k",
+  "risk": "3",
+  "title": "Missing constructor for Ownable in CurvesERC20.sol",
+  "issueId": 1483,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1483"
+}
