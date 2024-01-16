@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "AgileJune",
+  "risk": "2",
+  "title": "curvesTokenBalance has been subtracted twice while sellExternalCurvesToken() executed, then It might lead to incorrect distribution of fees among token holders",
+  "issueId": 989,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/989"
+}
