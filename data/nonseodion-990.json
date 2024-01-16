@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nonseodion",
+  "risk": "3",
+  "title": "Protocol loses its fees in all sellCurvesToken transactions",
+  "issueId": 990,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/990"
+}
