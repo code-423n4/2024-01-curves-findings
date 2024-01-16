@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "tansfer in batchClaiming and claimFees function don't check return value can cause token loss",
+  "issueId": 1332,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1332"
+}
