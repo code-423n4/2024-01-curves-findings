@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xStalin",
+  "risk": "3",
+  "title": "Attackers can grief buyers and force their curveTokens purchases to be executed at a higher price because users can't set a slippage control and the Curves contract doesn't return the excess ETH that is sent when buying curveTokens.",
+  "issueId": 1069,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1069"
+}
