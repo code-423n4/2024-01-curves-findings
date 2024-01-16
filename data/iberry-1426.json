@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "Exist overflow in _transferFees when price == 0  ",
+  "issueId": 1426,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1426"
+}
