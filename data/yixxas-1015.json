@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "yixxas",
+  "risk": "3",
+  "title": "ERC20 Curves tokens can be DOSed, preventing any exchanges back to the native curve token of the contract",
+  "issueId": 1015,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1015"
+}
