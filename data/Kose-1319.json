@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Kose",
+  "risk": "3",
+  "title": "Anyone Can Change The Curves address in FeeSplitter because of lack of Access Control",
+  "issueId": 1319,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1319"
+}
