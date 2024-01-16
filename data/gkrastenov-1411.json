@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "gkrastenov",
+  "risk": "3",
+  "title": "Malicious user can create external token for another user",
+  "issueId": 1411,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1411"
+}
