@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "mitev",
+  "risk": "2",
+  "title": "Curves::setMaxFeePercent has no upper border",
+  "issueId": 1415,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1415"
+}
