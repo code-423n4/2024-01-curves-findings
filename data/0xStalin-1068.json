@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xStalin",
+  "risk": "3",
+  "title": "Whitelised accounts can be forcefully DoSed from buying curveTokens during the presale",
+  "issueId": 1068,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1068"
+}
