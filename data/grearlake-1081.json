@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "grearlake",
+  "risk": "2",
+  "title": "Buyer are not able to buy more curve token if they already bought too many before",
+  "issueId": 1081,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1081"
+}
