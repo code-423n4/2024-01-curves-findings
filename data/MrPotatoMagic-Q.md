@@ -16,7 +16,7 @@
 
 ## [L-01] Missing access control on deploy() function of CurvesERC20Factory contract
 
-In the [deploy()](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/CurvesERC20Factory.sol#L6) function below, we can see that it is public without any modifier to restrict access to only the Curves.sol contract (from where deployments occur). Leaving this function public would allow duplication of ERC20 token names and symbols but with different owners. This could open up doors for phishing attacks, where an attacker can trick users into believing the malicious token is legitimate.
+In the [deploy()](https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/CurvesERC20Factory.sol#L6) function below, we can see that it is public without any modifier to restrict access to only the Curves.sol contract (from where deployments occur). Leaving this function public would allow duplication of ERC20 token names and symbols with same or different owners. This could open up doors for phishing attacks, where an attacker can trick users into believing the malicious token is legitimate.
 ```solidity
 File: CurvesERC20Factory.sol
 09:     function deploy(string memory name, string memory symbol, address owner) public returns (address) {
