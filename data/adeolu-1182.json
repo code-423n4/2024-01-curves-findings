@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "adeolu",
+  "risk": "3",
+  "title": "can bypass the whitelist and maxBuy limit set for presale via buyCurvesToken()",
+  "issueId": 1182,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1182"
+}
