@@ -136,7 +136,7 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L408
 ```
 may face challenges in fulfilling [sell orders](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L232-L233) if the demand to sell surpasses the available ETH, leading to potential liquidity crises.
 
-Apparently, the quadratic bonding formula might not guarantee a zero sum game, i.e. the gain of users buying low and selling high exactly matches the loss of users buying high and selling low.
+Apparently, the quadratic bonding formula might not guarantee a zero sum game, i.e. the gain of users buying low and selling high exactly matches the loss of users buying high and selling low. This could lead to tapping into ETH reserve belonging to other Curves token subjects which should not be the intended design/purpose.
 
 This situation underscores the importance of incorporating diverse mechanisms such as external ETH funding sources, reserve pools, or dynamic pricing models to safeguard against liquidity shortages. Such proactive measures in smart contract design not only enhance the robustness of the financial ecosystem but also bolster user confidence, ensuring a smoother and more reliable trading experience.
 
@@ -153,7 +153,23 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L267
         (, , , , uint256 totalFee) = getFees(price);
 +    }
 ```
-## [NC-02] Activate the optimizer
+## [NC-02] Efficiency Enhancement in Token Transfer Logic
+In the Curves smart contract, a proposed optimization for the `_transfer` function has been identified, aimed at enhancing efficiency and state management. This improvement involves modifying the token transfer logic to invoke the `_addOwnedCurvesTokenSubject` function only when a recipient is receiving a specific token type for the first time. By checking if the recipient's balance of the token in question equals the amount being transferred (indicating they previously held none), the function can conditionally update the `ownedCurvesTokenSubjects` list. This change not only prevents redundant list additions, but also ensures cleaner and more accurate tracking of unique token holders. It's a strategic update that aligns with best practices in smart contract development, emphasizing efficiency and precise state management.
+
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L313-L319
+
+```diff
+    function _transfer(address curvesTokenSubject, address from, address to, uint256 amount) internal {
+        if (amount > curvesTokenBalance[curvesTokenSubject][from]) revert InsufficientBalance();
+
+        // If transferring from oneself, skip adding to the list
+        if (from != to) {
++            if (curvesTokenBalance[curvesTokenSubject][to] == 0) { 
+                _addOwnedCurvesTokenSubject(to, curvesTokenSubject);
++            }
+        }
+```
+## [NC-03] Activate the optimizer
 Before deploying your contract, activate the optimizer when compiling using “solc --optimize --bin sourceFile.sol”. By default, the optimizer will optimize the contract assuming it is called 200 times across its lifetime. If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to “ --optimize-runs=1”. Conversely, if you expect many transactions and do not care for higher deployment cost and output size, set “--optimize-runs” to a high number.
 
 ```
