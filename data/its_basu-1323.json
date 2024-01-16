@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "its_basu",
+  "risk": "3",
+  "title": "Incorrect implementation of `onlyOwner` and onlyManager modifier in Security.sol which makes functions implementing it vulnerable. ",
+  "issueId": 1323,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1323"
+}
