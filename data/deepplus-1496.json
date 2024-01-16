@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "deepplus",
+  "risk": "2",
+  "title": "Because the `transferCurvesToken` function doesn't check if `amount` is greater than 0, a malicious user can permanently block other users from buying new curves tokens and depositing.",
+  "issueId": 1496,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1496"
+}
