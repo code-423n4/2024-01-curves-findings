@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "saneryee",
+  "risk": "2",
+  "title": "Lack of Contract Existence Check in ``curvesTokenSubject` interactions",
+  "issueId": 1075,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1075"
+}
