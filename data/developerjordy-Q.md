@@ -5,6 +5,7 @@
 | [L-1] | MerkleProof length is not validated  |  |
 | [L-2] | Use of bytes.concat instead of abi.encodePacked |  |
 | [L-3] | Two step ownership transfer |  |
+| [L-4] | Lost of dust in feeSplitter |  |
 
 
 
@@ -73,3 +74,45 @@ function for the transfer of the ownership to fully succeed. This ensures
 the nominated EOA account is a valid and active account.
 
 
+
+## [L-4] Lost of dust in feeSplitter
+The feeSplitter contract is experiencing a loss of dust
+
+### POC 
+```solidity
+function test_lostOfDust() public {
+    vm.prank(alice);
+    curves.buyCurvesToken(alice, 1);
+    assertEq(address(feeSplitter).balance, 0);
+
+    _buyToken(alice, bob);
+    _buyToken(alice, charlie);
+
+    uint256 bobsClaimableFees = feeSplitter.getClaimableFees(alice, bob);
+    assertEq(bobsClaimableFees, 5729166666666);
+
+    uint256 aliceClaimableFees = feeSplitter.getClaimableFees(alice, alice);
+    assertEq(aliceClaimableFees, 5729166666666);
+
+    uint256 charlieClaimableFees = feeSplitter.getClaimableFees(alice, charlie);
+    assertEq(charlieClaimableFees, 4166666666666);
+
+    uint256 feeSplitterBalance = address(feeSplitter).balance;
+    assertEq(feeSplitterBalance, 15625000000000);
+
+    vm.prank(alice);
+    feeSplitter.claimFees(alice);
+
+    vm.prank(bob);
+    feeSplitter.claimFees(alice);
+
+    vm.prank(charlie);
+    feeSplitter.claimFees(alice);
+
+    assertGt(15625000000000, bobsClaimableFees + charlieClaimableFees + aliceClaimableFees); // 15624999999998
+    assertEq(address(feeSplitter).balance, 2); // lost of dust
+}
+```
+
+### Recommended mitigation steps
+Consider a mechanism to distribute leftover dust.
