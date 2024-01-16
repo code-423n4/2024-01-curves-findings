@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xStalin",
+  "risk": "2",
+  "title": "CurveTokenSubject can set the referralFeeDestination's address to a contract that either can't receive ETH or returns bombs to DoS any buy/sell operation.",
+  "issueId": 1070,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1070"
+}
