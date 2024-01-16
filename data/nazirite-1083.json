@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "nazirite",
+  "risk": "3",
+  "title": "Lack of access control in the feeSpiltter contract",
+  "issueId": 1083,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1083"
+}
