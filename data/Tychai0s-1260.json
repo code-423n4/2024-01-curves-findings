@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tychai0s",
+  "risk": "2",
+  "title": "Front-Running Vulnerability in ERC20 Deployment through `withdraw` Function in `Curves.sol:465`",
+  "issueId": 1260,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1260"
+}
