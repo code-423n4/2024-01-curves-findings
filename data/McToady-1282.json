@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "McToady",
+  "risk": "3",
+  "title": "User will be unable to sell a token if all other holders have withdrawn their tokens as ERC20s",
+  "issueId": 1282,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1282"
+}
