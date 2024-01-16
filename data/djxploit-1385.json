@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "djxploit",
+  "risk": "2",
+  "title": "`getFees` doesn't calculate `totalfee` correctly due to precision loss",
+  "issueId": 1385,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1385"
+}
