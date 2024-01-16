@@ -111,6 +111,9 @@ function onBalanceChange(address token, address account) public onlyManager {
 ```
 This can impact certain view functions, including `getUserTokensAndClaimable`.
 
+If the balance transitions from `0` to a value larger than `0`, we do not insert that token. 
+This will also impact the `getUserTokensAndClaimable` function.
+
 [L-8] Consider sending the fee and updating the user's balance after when buying or selling tokens.
 
 Currently, we update the user's balance first and then send fees when buying and selling tokens. 
@@ -124,3 +127,17 @@ function _buyCurvesToken(address curvesTokenSubject, uint256 amount) internal {
 ```
 Consequently, the newly changed balance is affected by this fee.
 We could change this order.
+
+[l-9] Do not refund excess funds when purchasing tokens.
+
+We only verified if the user has sent sufficient funds when purchasing tokens.
+https://github.com/code-423n4/2024-01-curves/blob/516aedb7b9a8d341d0d2666c23780d2bd8a9a600/contracts/Curves.sol#L270
+```
+function _buyCurvesToken(address curvesTokenSubject, uint256 amount) internal {
+    if (msg.value < price + totalFee) revert InsufficientPayment();
+}
+```
+The user intends to buy tokens and obtain the price before making the purchase.
+They can send the money by calling the `buyCurvesToken` function. 
+However, before this transaction, others may sell the same tokens, leading to a reduction in the buy price. 
+As there is no logic to refund excess funds, the extra funds may become stuck in `Curves`.
