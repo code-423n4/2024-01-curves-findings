@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Faith",
+  "risk": "3",
+  "title": "`FeeSplitter#setCurves()` is unprotected, allowing an attacker to steal all ETH from the `FeeSplitter` contract.",
+  "issueId": 1304,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1304"
+}
