@@ -9,29 +9,7 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Security.sol#L2
   }
 ```
 
-## [L-02] User can execute `buyCurvesTokenWithName` even if supply != 0
-The protocol wants token subjects to only execute this function when supply == 0.
-However, `tokenSubjects` can still run the combination `buyCurvesToken` + `setNameAndSymbol` + `mint` which does the exact same thing as `buyCurvesTokenWithName` even when supply != 0
-We recommend removing this check as it stops nothing in this case.
-
-https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L364-L375
-
-```solidity
-    function buyCurvesTokenWithName(
-    address curvesTokenSubject,
-    uint256 amount,
-    string memory name,
-    string memory symbol
-) public payable {
-    uint256 supply = curvesTokenSupply[curvesTokenSubject];
-    @> if (supply != 0) revert CurveAlreadyExists();
-
-    _buyCurvesToken(curvesTokenSubject, amount);
-    _mint(curvesTokenSubject, name, symbol);
-}
-```
-
-## [L-03] Add zero value check for merkleroot setting
+## [L-02] Add zero value check for merkleroot setting
 The function `setWhitelist()` of the `Curves.sol` contract allows setting a merkleroot for a subject token presale. However, if set to 0, the presale will fail during the merkle verification check which means no one can put in buy trades during the presale because if merkleroot == 0 nobody can buy.
 We recommend adding validation check to ensure the bytes32 value passed is non-zero.
 
@@ -49,7 +27,7 @@ https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L394
 }
 ```
 
-## [L-04] Add a function to retreive ether
+## [L-03] Add a function to retrieve ether
 In the `Curves.sol` contract, the protocol should add a function to retrieve ether from the contract. For example, a user could lose access to their wallet or the protocol needs to upgrade fees contract. We recommend that the curves team add a function retreive ether from the `Curves.sol` contract as well as the `FeeSplitter.sol` contract.
 
 
@@ -59,8 +37,8 @@ function adminRetrieveEther() public onlyOwner {
 }
 ```
 
-## [L-05] Have a limit for the size of strings
-In the `setNameAndSymbol()` the protocol should limit the sizes of the `name` & `symbol` inputs for the `curvesTokenSubject`. Although general assumption is that nothing malicious can come from this, but setting a limit also reduces read/write cost ~ gas for the protocol in general.
+## [L-04] Have a limit for the size of strings
+In the `setNameAndSymbol()` the protocol should limit the sizes of the `name` & `symbol` inputs for the `curvesTokenSubject`. A malicious user, could create random token subject with huge strings. However, general assumption is that nothing malicious can come from this, but setting a limit also reduces read/write cost ~ gas for the protocol in general.
 
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L428-L437
 
@@ -89,4 +67,26 @@ We understand that token buys can only start with the amount being one. But we t
     └─ ← panic: arithmetic underflow or overflow (0x11)
 
 Test result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 21.35ms
+```
+
+## [NC-02] User can execute `buyCurvesTokenWithName` even if supply != 0
+The protocol wants token subjects to only execute this function when supply == 0.
+However, `tokenSubjects` can still run the combination `buyCurvesToken` + `setNameAndSymbol` + `mint` which does the exact same thing as `buyCurvesTokenWithName` even when supply != 0
+We recommend removing this check as it stops nothing in this case.
+
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L364-L375
+
+```solidity
+    function buyCurvesTokenWithName(
+    address curvesTokenSubject,
+    uint256 amount,
+    string memory name,
+    string memory symbol
+) public payable {
+    uint256 supply = curvesTokenSupply[curvesTokenSubject];
+    @> if (supply != 0) revert CurveAlreadyExists();
+
+    _buyCurvesToken(curvesTokenSubject, amount);
+    _mint(curvesTokenSubject, name, symbol);
+}
 ```
