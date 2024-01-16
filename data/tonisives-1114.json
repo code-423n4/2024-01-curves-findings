@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "tonisives",
+  "risk": "3",
+  "title": "Protocol fees are locked in Curves.sol due to missing withdrawal function",
+  "issueId": 1114,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1114"
+}
