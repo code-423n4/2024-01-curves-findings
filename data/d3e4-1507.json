@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "d3e4",
+  "risk": "3",
+  "title": "MEV; no slippage check on sell",
+  "issueId": 1507,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1507"
+}
