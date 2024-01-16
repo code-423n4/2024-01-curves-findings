@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Mike_Bello90",
+  "risk": "3",
+  "title": "An Attacker Can Steal All the ETH Rewards in FeeSplitter by Injecting a Malicious Contract to Manipulate Balances.",
+  "issueId": 1013,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1013"
+}
