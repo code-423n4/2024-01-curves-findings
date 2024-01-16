@@ -1,0 +1,4 @@
+# `FeeSplitter::userTokens` variable growing in an unwanted way
+
+Code snippet: https://github.com/code-423n4/2024-01-curves/blob/main/contracts/FeeSplitter.sol#L99
+When a user buys a curveToken, `_transfer` function's [this line](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L247) calls `onBalanceChange` function and it adds this curveToken to the userTokens mapping. No problem so far. But this user wants to buy the same curveToken OR sell a part of this curveToken (after sell `balanceOf(token, account) > 0`) [this line](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/FeeSplitter.sol#L99) run again and userTokens mapping hold the same curveToken more than one. If this userTokens mapping grows so much it may cause to exceed block gas limit in `getUserTokensAndClaimable` function.  
