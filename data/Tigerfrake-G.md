@@ -1,4 +1,4 @@
-# [G-1] Caching the curvesTokenBalance[curvesTokenSubject][from] value in a local variable can optimize on Gas.
+# [G-1] Caching the `curvesTokenBalance[curvesTokenSubject][from]` value in a `local variable` can optimize on Gas.
 
 ### Description:
 Reading from storage costs gas. When you access a variable for the first time, it costs 2100 gas, and subsequent accesses will cost less. By caching the value in a local variable, you can reduce the number of times you need to access storage, which can save on gas costs.
@@ -43,7 +43,7 @@ This [issue](https://github.com/code-423n4/2022-01-xdefi-findings/issues/128) de
 - https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L213
 - https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L246
 
-[G-5] We can save an entire SLOAD (2100 Gas) by short circuiting the operations
+# [G-4] We can save an entire SLOAD (2100 Gas) by short circuiting the operations
 
 ### Description:
 The if statement has two checks:
@@ -74,7 +74,7 @@ By reordering as shown below, we can avoid making the state read.
             feesEconomics.maxFeePercent ) revert InvalidFeeDefinition();
 ```
 
-# [G-4] For Loop Optimization
+# [G-5] For Loop Optimization
 
 ### Description: 
 The for-loop can be optimised in 4 ways:
@@ -85,3 +85,29 @@ The for-loop can be optimised in 4 ways:
 
 ### Instances:
 https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FCurves.sol#L330-L333
+
+# [G-6] Multiple address mappings can be combined into a single mapping of an address to a struct, where appropriate
+
+### Description:
+We can combine multiple `mappings` below into `structs`. We can then pack the structs by modifying the uint type for the values. This will result in cheaper storage reads since multiple mappings are accessed in functions and those values are now occupying the same storage slot, meaning the slot will become warm after the first `SLOAD`. In addition, when writing to and reading from the `struct` values, we will avoid a `Gsset (20000 gas) and Gcoldsload (2100 gas)`, since multiple `struct` values are now occupying the same slot.
+
+Example:
+```Solidity
+    mapping(address => TokenData) internal tokensData;
+    mapping(address => address[]) internal userTokens;
+```
+Becomes:
+First, define a struct that includes the data from both mappings:
+
+```Solidity
+struct TokenData {
+   uint256 balance;
+   address[] tokens;
+}
+```
+Then, create a single mapping of an address to this struct:
+```Solidity
+mapping(address => TokenData) internal tokensData;
+```
+### Instance:
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts%2FFeeSplitter.sol#L28-L29
