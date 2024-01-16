@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "m4ttm",
+  "risk": "3",
+  "title": "Excess Ether is not returned to the user",
+  "issueId": 1454,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1454"
+}
