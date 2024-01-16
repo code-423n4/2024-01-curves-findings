@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ArsenLupin",
+  "risk": "3",
+  "title": "Attacker can drain  FeeSplitter ETH balance because `setCurves` function is public. ",
+  "issueId": 1119,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1119"
+}
