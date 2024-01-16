@@ -34,6 +34,7 @@ The Curves protocol falls in the SocialFi category. From a rudimentary point-of-
 ### Chains supported
 The protocol will be deployed on  the form.network. It is an L2 network built on the Optimism Superchain. For more information, visit [link](https://docs.form.network/) and [link](https://info.form.network/).
 ### Curves.sol
+Consider rewriting the ``transferFees()`` function to not directly distribute funds to the ``referralFeeDestination`` address, rather store the amount the referral is supposed to receive, and allow him to withdraw it, whenever he decides. Utilize the [pull over push pattern](https://fravoll.github.io/solidity-patterns/pull_over_push.html).
 ### CurvesERC20.sol
 ### CurvesERC20Factory.sol
 ### FeeSplitter.sol
@@ -41,6 +42,8 @@ The protocol will be deployed on  the form.network. It is an L2 network built on
 ## 6. Centralization risks
 ## 7. Security approach of the project
 ## 8. Test analysis
+
+
 
 
 
