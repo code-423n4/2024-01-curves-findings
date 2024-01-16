@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "GhK3Ndf",
+  "risk": "3",
+  "title": "Missing Access Control and Insufficient Address Validation in FeeSplitter:setCurves allows for FeeSplitter contract ETH balance to be stolen",
+  "issueId": 1427,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1427"
+}
