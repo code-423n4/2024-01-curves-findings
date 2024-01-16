@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Silvermist",
+  "risk": "2",
+  "title": "Curves.sol#_transferFees() ProtocolFee is not paid on sell",
+  "issueId": 1078,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1078"
+}
