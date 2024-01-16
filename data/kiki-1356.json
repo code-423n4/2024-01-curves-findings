@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "kiki",
+  "risk": "3",
+  "title": "Reentrancy Vulnerability in claimFees Function",
+  "issueId": 1356,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1356"
+}
