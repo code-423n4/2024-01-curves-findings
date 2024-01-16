@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "42TechLabs",
+  "risk": "2",
+  "title": "Potential Reentrancy Risk in `_transferFees` Function Due to Use Of Low-Level `call`",
+  "issueId": 1063,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1063"
+}
