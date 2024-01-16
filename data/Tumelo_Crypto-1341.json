@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tumelo_Crypto",
+  "risk": "3",
+  "title": "User can drain FeeSplitter.sol Contract by transferring tokens to other amounts and calling claimFees() function",
+  "issueId": 1341,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1341"
+}
