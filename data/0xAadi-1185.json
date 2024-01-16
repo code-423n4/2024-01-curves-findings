@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xAadi",
+  "risk": "3",
+  "title": "Platform-Wide Denial of Service (DoS) Risk or 100% holder fees theft Due to Unrestricted `setCurves()` Function in `FeeSplitter` Contract",
+  "issueId": 1185,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1185"
+}
