@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xGreyWolf",
+  "risk": "2",
+  "title": "Wrong `startTime` validation logic will allow the buying of Curves token via `Curves::buyCurvesToke()` before the presales even starts.",
+  "issueId": 1125,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1125"
+}
