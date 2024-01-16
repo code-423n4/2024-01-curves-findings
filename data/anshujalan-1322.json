@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "anshujalan",
+  "risk": "3",
+  "title": "Balance changes are not accounted by the FeeSplitter during transfers, resulting in incorrect fee calculation.",
+  "issueId": 1322,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1322"
+}
