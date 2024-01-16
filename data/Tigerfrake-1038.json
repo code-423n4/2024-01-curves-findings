@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Tigerfrake",
+  "risk": "3",
+  "title": "Potential Unrestricted Deployment of CurvesERC20 Contracts Leading to Unauthorized Access Control",
+  "issueId": 1038,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1038"
+}
