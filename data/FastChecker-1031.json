@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "FastChecker",
+  "risk": "3",
+  "title": "If there is any Ether left after purchasing a token by calling the `Curves.sol#buyCurvesToken` function, the user incurs a loss because the Ether is not returned to the user.",
+  "issueId": 1031,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1031"
+}
