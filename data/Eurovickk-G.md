@@ -9,7 +9,7 @@ function verifyMerkle(address curvesTokenSubject, address caller, bytes32[] memo
         bytes32 proofElement = proof[i];
 
         if (computedHash < proofElement) {
-            computedHash = keccak256(abi.encodePacked(computedHash, proofElement));
+            computedHash = keccak256(abi.encodePacked(computedHash, proofElement))
         } else {
             computedHash = keccak256(abi.encodePacked(proofElement, computedHash));
         }
