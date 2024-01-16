@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "Matue",
+  "risk": "3",
+  "title": "Missing ACL in setCurves function can lead to draining of funds in FeeSplitter",
+  "issueId": 1398,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1398"
+}
