@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "ether_sky",
+  "risk": "3",
+  "title": "Should update user's fee within the onBalanceChange function",
+  "issueId": 1076,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1076"
+}
