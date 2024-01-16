@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "smbv-1923",
+  "risk": "2",
+  "title": "\"buyCurvesTokenForPresale\" and \"buyCurvesTokenWhitelisted\" will revert even if presale for token has started.",
+  "issueId": 1413,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1413"
+}
