@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0x0bserver",
+  "risk": "3",
+  "title": "Protocol losses of funds every time a user sells his CurveTokens",
+  "issueId": 1446,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1446"
+}
