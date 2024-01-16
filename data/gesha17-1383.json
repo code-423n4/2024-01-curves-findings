@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "gesha17",
+  "risk": "3",
+  "title": "Malicios user can permanently DoS the withdraw function by increasing the number of tokens in ownedCurvesTokenSubjects for the address of Curves",
+  "issueId": 1383,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1383"
+}
