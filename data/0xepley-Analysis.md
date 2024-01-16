@@ -42,7 +42,7 @@ Uses Consensys Solidity Metrics
 -  **Total Lines:** Total number of lines in the file 
 
 ## Analysis of sloc of contracts
-[![Screenshot-from-2024-01-16-21-03-06.png](https://i.postimg.cc/gjgLrXp5/Screenshot-from-2024-01-16-21-03-06.png)](https://postimg.cc/LgZ8bsnB))
+[![Screenshot-from-2024-01-16-21-03-06.png](https://i.postimg.cc/gjgLrXp5/Screenshot-from-2024-01-16-21-03-06.png)](https://postimg.cc/LgZ8bsnB)
 
 
 ## AST Node Statics of FeeSplitter.sol Contract
@@ -65,7 +65,7 @@ It contains all the functions that the contract FeeSplitter.sol have
 
 
 ## Call graph of Curve.sol
-[![Screenshot-from-2024-01-16-21-03-06.png](https://i.postimg.cc/gjgLrXp5/Screenshot-from-2024-01-16-21-03-06.png)](https://postimg.cc/LgZ8bsnB)
+[![Screenshot-from-2024-01-17-00-11-40.png](https://i.postimg.cc/Pq6gkqhS/Screenshot-from-2024-01-17-00-11-40.png)](https://postimg.cc/bGtCxpZn)
 
 
 ## Call graph of FeeSplitter.sol
@@ -86,40 +86,40 @@ It contains all the functions that the contract FeeSplitter.sol have
 
 ## Contract Description Table of Curves.sol
 
-| Contract Type  | Function Name                 | Visibility     | Mutability | Modifiers          | Security         | Implementation       |
-| -------------- | ----------------------------- | --------------- | ---------- | ------------------ | ---------------- | --------------------- |
-| Public         | setFeeRedistributor           | External        | 🛑        | onlyOwner          |                  |                       |
-| External       | setMaxFeePercent              | External        | 🛑        | onlyManager        |                  |                       |
-| External       | setProtocolFeePercent         | External        | 🛑        | onlyOwner          |                  |                       |
-| External       | setExternalFeePercent         | External        | 🛑        | onlyManager        |                  |                       |
-| External       | setReferralFeeDestination     | Public          | 🛑        | onlyTokenSubject   |                  |                       |
-| External       | setERC20Factory               | External        | 🛑        | onlyOwner          |                  |                       |
-| Public         | getFees                       | Public          |            |                    |                  |                       |
-| Public         | getPrice                      | Public          |            |                    |                  |                       |
-| Public         | getBuyPrice                   | Public          |            |                    |                  |                       |
-| Public         | getSellPrice                  | Public          |            |                    |                  |                       |
-| Public         | getBuyPriceAfterFee           | Public          |            |                    |                  |                       |
-| Public         | getSellPriceAfterFee          | Public          |            |                    |                  |                       |
-| Public         | buyCurvesToken                | Public          | 💵        |                    |                  |                       |
-| Internal       | _transferFees                 | Internal        |            |                    |                  |                       |
-| Internal       | _buyCurvesToken               | Internal        |            |                    |                  |                       |
-| Public         | sellCurvesToken               | Public          |            |                    |                  |                       |
-| External       | transferCurvesToken           | External        |            |                    |                  |                       |
-| External       | transferAllCurvesTokens       | External        |            |                    |                  |                       |
-| Internal       | _transfer                     | Internal        |            |                    |                  |                       |
-| Internal       | _addOwnedCurvesTokenSubject   | Internal        |            |                    |                  |                       |
-| Internal       | _deployERC20                  | Internal        |            |                    |                  |                       |
-| Public         | buyCurvesTokenWithName         | Public          | 💵        |                    |                  |                       |
-| Public         | buyCurvesTokenForPresale       | Public          | 💵        | onlyTokenSubject   |                  |                       |
-| External       | setWhitelist                  | External        | 🛑        |                    |                  |                       |
-| Public         | buyCurvesTokenWhitelisted     | Public          | 💵        |                    |                  |                       |
-| Public         | verifyMerkle                  | Public          |            |                    |                  |                       |
-| External       | setNameAndSymbol              | External        | 🛑        | onlyTokenSubject   |                  |                       |
-| External       | mint                          | External        | 🛑        | onlyTokenSubject   |                  |                       |
-| Internal       | _mint                         | Internal        | 🛑        | onlyTokenSubject   |                  |                       |
-| Public         | withdraw                      | Public          | 🛑        |                    |                  |                       |
-| Public         | deposit                       | Public          | 🛑        |                    |                  |                       |
-| Public         | sellExternalCurvesToken       | Public          | 🛑        |                    |                  |                       |
+| Type  | Function Name                 | Visibility     | Mutability | Modifiers          |
+| -------------- | ----------------------------- | --------------- | ---------- | ------------------ |
+| Public         | setFeeRedistributor           | External        | 🛑        | onlyOwner          |
+| External       | setMaxFeePercent              | External        | 🛑        | onlyManager        |
+| External       | setProtocolFeePercent         | External        | 🛑        | onlyOwner          |
+| External       | setExternalFeePercent         | External        | 🛑        | onlyManager        |
+| External       | setReferralFeeDestination     | Public          | 🛑        | onlyTokenSubject   |
+| External       | setERC20Factory               | External        | 🛑        | onlyOwner          |
+| Public         | getFees                       | Public          |            |                    |
+| Public         | getPrice                      | Public          |            |                    |
+| Public         | getBuyPrice                   | Public          |            |                    |
+| Public         | getSellPrice                  | Public          |            |                    |
+| Public         | getBuyPriceAfterFee           | Public          |            |                    |
+| Public         | getSellPriceAfterFee          | Public          |            |                    |
+| Public         | buyCurvesToken                | Public          | 💵        |                    |
+| Internal       | _transferFees                 | Internal        |            |                    |
+| Internal       | _buyCurvesToken               | Internal        |            |                    |
+| Public         | sellCurvesToken               | Public          |            |                    |
+| External       | transferCurvesToken           | External        |            |                    |
+| External       | transferAllCurvesTokens       | External        |            |                    |
+| Internal       | _transfer                     | Internal        |            |                    |
+| Internal       | _addOwnedCurvesTokenSubject   | Internal        |            |                    |
+| Internal       | _deployERC20                  | Internal        |            |                    |
+| Public         | buyCurvesTokenWithName         | Public          | 💵        |                    |
+| Public         | buyCurvesTokenForPresale       | Public          | 💵        | onlyTokenSubject   |
+| External       | setWhitelist                  | External        | 🛑        |                    |
+| Public         | buyCurvesTokenWhitelisted     | Public          | 💵        |                    |
+| Public         | verifyMerkle                  | Public          |            |                    |
+| External       | setNameAndSymbol              | External        | 🛑        | onlyTokenSubject   |
+| External       | mint                          | External        | 🛑        | onlyTokenSubject   |
+| Internal       | _mint                         | Internal        | 🛑        | onlyTokenSubject   |
+| Public         | withdraw                      | Public          | 🛑        |                    |
+| Public         | deposit                       | Public          | 🛑        |                    |
+| Public         | sellExternalCurvesToken       | Public          | 🛑        |                    |
 
 
 ## Contract Description Table of FeeSplitter.sol
@@ -140,6 +140,14 @@ It contains all the functions that the contract FeeSplitter.sol have
 | onBalanceChange           | Public          | 💵        | onlyManager        |
 | batchClaiming             | Public          | 🛑        | onlyManager        |
 |                           | External ❗️     | 💵        |                    |
+
+
+
+| Symbol | Meaning                 |
+| ------ | ----------------------- |
+| 🛑      | Function can modify state |
+| 💵      | Function is payable     |
+
 
 
 ## c) Test analysis
@@ -299,6 +307,8 @@ Note: I didn't tracked the time, the time I mentioned is just an estimate
 
 ### Time spent:
 3 hours
+
+
 
 
 ### Time spent:
