@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "vnavascues",
+  "risk": "3",
+  "title": "`FeeSplitter.curves` state variable can be replaced by a malicious contract due to lack of access controls in `setCurves` function",
+  "issueId": 1355,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1355"
+}
