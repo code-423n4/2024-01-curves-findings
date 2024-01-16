@@ -1,4 +1,4 @@
-# 🛠️ Analysis - Olas
+# 🛠️ Analysis - Curve Protocol
 ### Summary
 | List |Head |Details|
 |:--|:----------------|:------|
@@ -112,7 +112,60 @@ vm.label(POOL_PROXY, 'lending pool');
 
 Ref:https://xin-xia.github.io/publication/icse194.pdf
 
-[![sdf.png](https://i.postimg.cc/pXZH2Xdh/sdf.png)](https://postimg.cc/nCC52xBp)
+[![nabeel.jpg](https://i.postimg.cc/x1bHPVz4/nabeel.jpg)](https://postimg.cc/ZW4CTgj8)
+
+
+# Test-case analysis of Contracts
+
+### General Information
+- **Solc Version:** 0.8.7
+- **Optimizer Enabled:** false
+- **Runs:** 200
+- **Block Limit:** 30,000,000 gas
+
+
+| Contract          | Method                     | Min    | Max    | Avg    | # calls |
+|-------------------|----------------------------|--------|--------|--------|---------|
+| Curves            | buyCurvesToken             | 66676  | 242163 | 124108 | 68      |
+| Curves            | buyCurvesTokenForPresale   | 187955 | 208239 | 205341 | 7       |
+| Curves            | buyCurvesTokenWhitelisted  | 99264  | 163498 | 126028 | 12      |
+| Curves            | buyCurvesTokenWithName     | -      | -      | 1774847| 1       |
+| Curves            | mint                       | -      | -      | 1688644| 1       |
+| Curves            | sellCurvesToken            | 53738  | 66050  | 59894  | 4       |
+| Curves            | sellExternalCurvesToken    | -      | -      | 83967  | 2       |
+| Curves            | setERC20Factory            | -      | -      | 29171  | 1       |
+| Curves            | setExternalFeePercent      | 55938  | 75910  | 65924  | 2       |
+| Curves            | setFeeRedistributor        | -      | -      | 29150  | 1       |
+| Curves            | setMaxFeePercent           | -      | -      | 55164  | 2       |
+| Curves            | setNameAndSymbol           | 44952  | 74614  | 67199  | 4       |
+| Curves            | setProtocolFeePercent      | -      | -      | 77875  | 2       |
+| Curves            | setReferralFeeDestination  | -      | -      | 44906  | 1       |
+| Curves            | setWhitelist               | -      | -      | 48121  | 1       |
+| Curves            | transferAllCurvesTokens    | -      | -      | 258653 | 1       |
+| Curves            | transferCurvesToken        | 84506  | 98483  | 95688  | 5       |
+| Curves            | transferOwnership          | -      | -      | 27127  | 1       |
+| Curves            | withdraw                   | 153428 | 1813418| 1689234| 15      |
+| FeeSplitter       | addFees                    | 47908  | 65008  | 61587  | 10      |
+| FeeSplitter       | batchClaiming              | -      | -      | 130582 | 2       |
+| FeeSplitter       | claimFees                  | -      | -      | 77744  | 2       |
+| FeeSplitter       | onBalanceChange            | 69648  | 106648 | 85597  | 10      |
+| FeeSplitter       | setCurves                  | 44095  | 44119  | 44118  | 56      |
+| FeeSplitter       | setManager                 | 46613  | 46637  | 46636  | 50      |
+| MockERC20         | burn                       | -      | -      | 34615  | 1       |
+| MockERC20         | mint                       | 51788  | 68888  | 65779  | 11      |
+
+
+
+## Deployments
+
+| Contract               | Min      | Max      | Avg      | % of limit   |
+|------------------------|----------|----------|----------|--------------|
+| Curves                 | 5232807  | 5232831  | 5232828  | 17.4 %       |
+| CurvesERC20Factory     | -        | -        | 2217610  | 7.4 %        |
+| FeeSplitter            | -        | -        | 1558996  | 5.2 %        |
+| MockCurvesForFee       | -        | -        | 243714   | 0.8 %        |
+| MockERC20              | 1416771  | 1436683  | 1418591  | 4.7 %        |
+
 
 
 
