@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "whoismatthewmc1",
+  "risk": "2",
+  "title": "Active traders may DoS their own ability to batch claim and use getUserTokensAndClaimable even if they only hold a single subjectToken",
+  "issueId": 1067,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1067"
+}
