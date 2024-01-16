@@ -1,0 +1,8 @@
+{
+  "contest": 316,
+  "handle": "0xDemon",
+  "risk": "3",
+  "title": "Malicious actor can deploy CurvesERC20 tokens to the desired address and mint any amount to drain curvesToken",
+  "issueId": 1194,
+  "issueUrl": "https://github.com/code-423n4/2024-01-curves-findings/issues/1194"
+}
