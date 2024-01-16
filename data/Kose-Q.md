@@ -102,3 +102,7 @@ buyCurvesToken() function and its derivatives are payable and receives ether in 
 ```
 ### Recommendation 
 If (msg.value > price + totalFee), add excess funds to the newly created mapping userExcessEther, and create a function for user to withdraw this excess ether. It is best to make this a two step process, otherwise low level call's can create further problems.
+
+## L - 4: Unnecessary receive() function in FeeSplitter
+
+FeeSplitter has a receive() function but there is no way to use ether that is received via ether transfer to this contract. Also there is no way to withdraw funds that are sended to contract. Either remove the receive() function or create a way to use them (if you plan to receive donations).
